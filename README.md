@@ -1,6 +1,6 @@
 # OC-Project-1
 
-# Project Full Name:
+# Project Booki:
 
 - Créez la page d’accueil d’une agence de voyage avec HTML & CSS.
 
@@ -10,56 +10,32 @@ Booki est une plateforme de réservation de logements.
 
 # Technologies utilisées
 
-- HTML
-- CSS
-
-# Scénario:
-
-- Booki
+- HTML5
+- CSS3
 
 # Liens
 
 - [Maquette](https://www.figma.com/design/B3eLowtWREc9YXzBcGRAHn/Maquettes-Booki?node-id=3-0&p=f)
+- [Scenario](https://openclassrooms.com/fr/paths/877/projects/639/697-scenario)
 - [Starter code](https://github.com/OpenClassrooms-Student-Center/booki-starter-code)
 - [Icons](https://icons.getbootstrap.com/?q=char)
+- [Code Validation](https://validator.w3.org/)
+- [Note de Synthèse](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/DW_P2+HTML+CSS+Booki/DW+Booki+-+Note+de+synthese.pdf)
 
-# Project Informations:
+# Informations:
 
-- General Colors:
+- Colors:
 
   - #0065FC
   - #DEEBFF
   - #D9D9D9
   - #F2F2F2
 
-- General Logo:
-  -Booki - #0065FC
+- Fonts:
 
-- General Fonts:
-
-  - Card/Title
-
-    - font-family: Raleway; font-weight: 700; font-size: 16px; line-height: 100%; letter-spacing: 0%;
-
-  - Title/Section
-
-    - font-family: Raleway; font-weight: 700; font-size: 22px; line-height: 100%; letter-spacing: 0%;
-
-  - Information
-    - font-family: Raleway; font-weight: 400; font-size: 16px; line-height: 100%; letter-spacing: 0%;
-
-- Headline
-
-  - Title/Section
-
-    - Trouvez votre hébergement pour des vacances de rêve
-    - font-family: Raleway; font-weight: 700; font-size: 22px; line-height: 100%; letter-spacing: 0%;
-    - #000000
-
-  - Footer/Link
-    - En plein centre-ville ou en pleine nature
-    - font-family: Raleway; font-weight: 400; font-size: 16px; line-height: 100%; letter-spacing: 0%;
-    - #000000
+  - Raleway
+  - font-weight: 700 - 400
+  - font-size: 16px - 22px
 
 # Composants
 
@@ -139,8 +115,6 @@ Booki est une plateforme de réservation de logements.
 
 # Step to-do:
 
-https://openclassrooms.com/fr/paths/877/projects/639/697-scenario
-
 - Mettre en place un environment de développement.
 - Découper la maquette.
 - Intégrez le header du projet.
@@ -152,11 +126,3 @@ https://openclassrooms.com/fr/paths/877/projects/639/697-scenario
 - Implémentez le footer.
 - Mettre en place le responsive design
 - Vérifiez la qualité du code.
-
-# Note de synthese:
-
-https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/DW_P2+HTML+CSS+Booki/DW+Booki+-+Note+de+synthese.pdf
-
-# Code Validation
-
-https://validator.w3.org/
