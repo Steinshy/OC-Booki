@@ -1,9 +1,9 @@
 /* Feuille de style Booki */
 
 :root {
-  --main-color: #0065FC;
-  --main-bg-color: #F2F2F2;
-  --filter-bg-color: #DEEBFF;
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
   --secondary-color: #5e9bf7;
 }
 
@@ -35,13 +35,13 @@ input {
   width: 100%;
 }
 
+input::placeholder {
+  color: var(--secondary-color);
+}
+
 input:focus {
   outline: none;
   border-color: var(--main-color);
-}
-
-input::placeholder {
-  color: #ccc;
 }
 
 header {
@@ -49,21 +49,20 @@ header {
 }
 
 html body {
-  margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
-  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 main {
   display: flex;
-  max-width: 1200px;
 }
 
 footer {
@@ -145,7 +144,7 @@ nav ul li a.active::before {
   background-color: var(--secondary-bg-color);
 }
 
-.search-bar button {
+.search-bar .search-button {
   background: var(--main-color);
   color: #fff;
   border: 1px solid var(--main-color);
@@ -177,6 +176,11 @@ nav ul li a.active::before {
 
 .filter-bar button .btn-active {
   background-color: var(--main-color);
+}
+
+/* General Contenair */
+.general-container {
+  display: flex;
 }
 
 /* Property offers */
