@@ -8,13 +8,25 @@
 }
 
 /* Reset CSS */
+html body {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Elements */
 a {
   text-decoration: none;
-  color: var(--secondary-color);
 }
 
 a:hover {
-  text-decoration: none;
   color: var(--main-color);
 }
 
@@ -28,6 +40,12 @@ li {
   list-style: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Input */
 input {
   border: 1px solid #ccc;
   padding: 0.5rem;
@@ -44,86 +62,102 @@ input:focus {
   border-color: var(--main-color);
 }
 
-header {
-  padding: 1rem;
-}
-
-html body {
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-}
-
-body {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
+/* Main */
 main {
   display: flex;
 }
 
-footer {
+/* Header */
+header {
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-brand img {
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
 }
 
-/* Navbar */
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navigation-bar {
-  height: 70px;
-  width: 100%;
+.header-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-nav ul {
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 0;
-  width: 120px;
-}
-
-nav ul li a {
-  position: relative;
-  display: block;
-  text-align: center;
-  height: 70px;
-  line-height: 70px;
+/* Header Navbar */
+nav a {
   color: black;
-  color: var(--primary-color);
-  text-decoration: none;
+}
+.header-nav {
+  display: flex;
 }
 
-nav ul li a:hover {
+.header-nav ul {
+  display: inherit;
+}
+
+.header-nav li {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+.header-nav .active {
+  color: var(--main-color);
+  position: relative;
+  line-height: 70px;
+}
+
+.header-nav a:hover {
   color: var(--secondary-color);
 }
 
-nav ul li a.active {
-  color: var(--main-color);
-}
-
-nav ul li a.active::before {
+/* Header Navbar Blue Line */
+.header-nav a.active::before {
   color: var(--secondary-color);
   content: "";
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 2px;
+  height: 0.5px;
   background-color: var(--main-color);
+}
+
+.navigation-bar {
+  height: 70px;
+  width: 100%;
+}
+
+footer {
+  padding: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-nav {
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  text-align: center;
 }
 
 /* Search-bar */
@@ -153,6 +187,15 @@ nav ul li a.active::before {
   cursor: pointer;
 }
 
+.btn-search-button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+}
+
 /* Filter-Bar */
 .filter-bar {
   display: flex;
@@ -178,17 +221,16 @@ nav ul li a.active::before {
   background-color: var(--main-color);
 }
 
-/* General Contenair */
+/* General Container */
 .general-container {
   display: flex;
+  flex-direction: row;
 }
 
 /* Property offers */
 .section-group-offers {
   display: block;
   flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #666;
 }
 
 .property-popular {
@@ -196,9 +238,14 @@ nav ul li a.active::before {
   flex-wrap: wrap;
 }
 
-.property-row {
+.main-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section-title {
+  text-align: left;
 }
 
 .section-group-sponsored {
@@ -221,13 +268,11 @@ nav ul li a.active::before {
 
 /* Property Card */
 .property-card {
-  background: #fff;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 5rem 8rem rgba(0, 0, 0, 0.07);
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  margin: 1rem;
 }
 
 .property-card img {
@@ -245,4 +290,28 @@ nav ul li a.active::before {
   font-size: 14px;
   color: #666;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .header-container {
+    margin: 0;
+  }
+  .header-brand {
+    display: flex;
+  }
+
+  .header-nav a.active::before {
+    display: none;
+  }
+
+  .header-nav a.active::after {
+    color: var(--secondary-color);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+  }
 }
