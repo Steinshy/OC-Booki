@@ -21,18 +21,13 @@
   <body>
     <header>
       <div class="header-container">
-        <div class="header-brand">
-          <img src="./assets/favicons/booki.ico" alt="Booki-Logo">
-        </div>
-        <div class="header-right">
-          <nav class="header-nav">
-            <ul>
-              <li><a class="active" href="#">Hébergements</a></li>
-              <li><a href="#">Activités</a></li>
-            </ul>
-          </nav>
-
-        </div>
+        <img class="logo" src="./assets/favicons/booki.ico" alt="Booki-Logo">
+        <nav class="header-nav">
+          <ul>
+            <li><a class="active" href="#lodging">Hébergements</a></li>
+            <li><a href="#activities">Activités</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -75,7 +70,7 @@
             </div>
 
             <div class="main-row">
-              <div class="property-card">
+              <div class="property-card"><a href="lodging"></a>
                 <img src="./assets/img/offers-main/jpg/fred-kleber.jpg" alt="Hôtel du port">
                 <section>
                   <h3>Hôtel du port</h3>
@@ -229,7 +224,7 @@
           </div>
         </div>
 
-        <div class="property-activities">
+        <div id="activities" class="property-activities">
           <h2>Activités à Marseille</h2>
           <div class="property-card">
             <img src="./assets/img/activities/jpg/reno-laithienne.jpg" alt="Vieux-Port">

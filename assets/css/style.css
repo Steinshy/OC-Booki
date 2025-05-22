@@ -1,5 +1,6 @@
-/* Feuille de style Booki */
-
+/*---------------------------------------*/
+/*-----// Feuille de style Booki //------*/
+/*---------------------------------------*/
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -7,7 +8,9 @@
   --secondary-color: #5e9bf7;
 }
 
-/* Reset CSS */
+/*--------------------------- */
+/*-----// Reset CSS //------- */
+/*--------------------------- */
 html body {
   padding: 0;
   height: 100%;
@@ -21,7 +24,9 @@ body {
   margin: 0 auto;
 }
 
-/* Elements */
+/*---------------------------------*/
+/*-----// Global Elements //-------*/
+/*---------------------------------*/
 a {
   text-decoration: none;
 }
@@ -45,7 +50,9 @@ img {
   height: auto;
 }
 
-/* Input */
+/*------------------------------------*/
+/*---------// Global Input //---------*/
+/*------------------------------------*/
 input {
   border: 1px solid #ccc;
   padding: 0.5rem;
@@ -62,50 +69,48 @@ input:focus {
   border-color: var(--main-color);
 }
 
-/* Main */
+/*--------------------------------*/
+/*-----------// Main //-----------*/
+/*--------------------------------*/
 main {
   display: flex;
 }
 
-/* Header */
+/*----------------------------------*/
+/*-----------// Header //-----------*/
+/*----------------------------------*/
 header {
   margin: 0;
 }
 
 .header-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.header-brand {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.header-brand img {
+.logo {
   padding: 1rem;
+  margin: 0 auto;
+  width: auto;
+  display: block;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-}
-
-/* Header Navbar */
+/*-----------------------------*/
+/*-----// Header Navbar //-----*/
+/*-----------------------------*/
 nav a {
   color: black;
 }
-.header-nav {
-  display: flex;
-}
-
 .header-nav ul {
-  display: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-nav li {
-  display: inherit;
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
@@ -113,7 +118,6 @@ nav a {
 
 .header-nav .active {
   color: var(--main-color);
-  position: relative;
   line-height: 70px;
 }
 
@@ -121,43 +125,24 @@ nav a {
   color: var(--secondary-color);
 }
 
-/* Header Navbar Blue Line */
+/*-----------------------------*/
+/*-----// Header Navbar //-----*/
+/*-----//  Blue Line    //-----*/
 .header-nav a.active::before {
   color: var(--secondary-color);
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 0.5px;
+  height: 1px;
   background-color: var(--main-color);
+  bottom: 0; /* Mobile First */
 }
 
 .navigation-bar {
   height: 70px;
   width: 100%;
-}
-
-footer {
-  padding: 1rem;
-}
-
-footer a {
-  text-decoration: none;
-  color: black;
-}
-
-.footer-nav {
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.copyright {
-  text-align: center;
 }
 
 /* Search-bar */
@@ -266,6 +251,10 @@ footer a {
   size: 1rem;
 }
 
+/*-----------------------------*/
+/*----// Property Card //------*/
+/*-----//  Blue Line    //-----*/
+
 /* Property Card */
 .property-card {
   overflow: hidden;
@@ -292,26 +281,43 @@ footer a {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 600px) {
+/*-----------------------------*/
+/*--------// Footer //---------*/
+/*-----------------------------*/
+
+footer {
+  padding: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/*-----------------------------*/
+/*----// Media Quaries //------*/
+/*-----------------------------*/
+@media screen and (min-width: 600px) {
   .header-container {
-    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
   }
-  .header-brand {
-    display: flex;
+
+  .logo {
+    margin: 0;
   }
 
   .header-nav a.active::before {
-    display: none;
-  }
-
-  .header-nav a.active::after {
-    color: var(--secondary-color);
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--main-color);
+    top: 0;
   }
 }
