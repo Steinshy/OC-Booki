@@ -24,8 +24,8 @@
       <img class="site-logo" src="./assets/favicons/booki.ico" alt="Booki-Logo">
       <nav role="navigation" aria-label="Navigation Principale">
         <ul>
-          <li><a href="#hebergements" aria-current="page">Hébergements</a></li>
-          <li><a href="#populaires">Activités</a></li>
+          <li><a aria-current="page">Hébergements</a></li>
+          <li><a>Activités</a></li>
         </ul>
       </nav>
     </header>
@@ -51,30 +51,187 @@
       </section>
 
       <!-- Main - Filters -->
-      <div class="filters">
-        <h2>Filtres</h2>
-        <button type="button"><i class="fa-solid fa-money-bill"></i>Économique</button>
-        <button type="button"><i class="fa-solid fa-person"></i>Familial</button>
-        <button type="button"><i class="fa-solid fa-heart"></i>Romantique</button>
-        <button type="button"><i class="fa-solid fa-fire"></i>Nos pépites</button>
-      </div>
-      <div class="infobar">
-        <p><i class="fa-solid fa-circle-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
-      </div>
+      <section class="filters-section" role="group" aria-labelledby="filters-title">
+        <div class="filters" role="group" aria-labelledby="filters-title">
+          <h2 id="filters-title" class="filters-title">Filtres</h2>
+          <button type="button" class="filter-button" aria-pressed="false">
+            <i class="fa-solid fa-money-bill" aria-hidden="true"></i>
+            <span>Économique</span>
+          </button>
+          <button type="button" class="filter-button" aria-pressed="false">
+            <i class="fa-solid fa-person" aria-hidden="true"></i>
+            <span>Familial</span>
+          </button>
+          <button type="button" class="filter-button" aria-pressed="false">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <span>Romantique</span>
+          </button>
+          <button type="button" class="filter-button" aria-pressed="false">
+            <i class="fa-solid fa-fire" aria-hidden="true"></i>
+            <span>Nos pépites</span>
+          </button>
+        </div>
 
-      <!-- Main - Offers -->
-      <div class="general-container">
-        <div class="section-group-offers">
-          <div class="section-title">
-            <h2>Hébergements a Marseille</h2>
+        <div class="availability-info" aria-live="polite">
+          <p aria-live="polite">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            Plus de 500 logements sont disponibles dans cette ville
+          </p>
+        </div>
+      </section>
+
+      <!-- Main - Hotels Offers -->
+      <div class="hotels-container">
+        <section class="offers-section" aria-labelledby="marseille-title">
+          <h3 class="offers-title">Hébergements à Marseille</h3>
+
+          <div class="offers-cards">
+            <article class="property-card">
+              <a href="#" class="property-link" aria-labelledby="hotel-amina">
+                <img src="./assets/img/offers-main/jpg/marcus-loke.jpg" alt="Auberge la Cannebière"
+                  class="property-image">
+                <div class="property-content">
+                  <h3 id="hotel-amina" class="property-title">Hôtel chez Amina</h3>
+                  <p class="property-price">Nuit à partir de 96€</p>
+                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="property-card">
+              <a href="#" class="property-link" aria-labelledby="hotel-amina">
+                <img src="./assets/img/offers-main/jpg/febrian-zakaria.jpg" alt="Hôtel chez Amina"
+                  class="property-image">
+                <div class="property-content">
+                  <h3 id="hotel-amina" class="property-title">Hôtel chez Amina</h3>
+                  <p class="property-price">Nuit à partir de 96€</p>
+                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="property-card">
+              <a href="#" class="property-link" aria-labelledby="hotel-amina">
+                <img src="./assets/img/offers-main/jpg/reisetopia.jpg" alt="Hôtel Les mouettes" class="property-image">
+                <div class="property-content">
+                  <h3 id="hotel-amina" class="property-title">Hôtel les mouettes</h3>
+                  <p class="property-price">Nuit à partir de 76€</p>
+                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
           </div>
+          <div class="offers-cards">
+            <article class="property-card">
+              <a href="#" class="property-link" aria-labelledby="hotel-amina">
+                <img src="./assets/img/offers-main/jpg/annie-spratt.jpg" alt="Hôtel de la mer" class="property-image">
+                <div class="property-content">
+                  <h3 id="hotel-amina" class="property-title">Hôtel de la mer</h3>
+                  <p class="property-price">Nuit à partir de 46€</p>
+                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
 
+            <article class="property-card">
+              <a href="#" class="property-link" aria-labelledby="hotel-amina">
+                <img src="./assets/img/offers-main/jpg/marcus-loke.jpg" alt="Auberge La Canebière"
+                  class="property-image">
+                <div class="property-content">
+                  <h3 id="hotel-amina" class="property-title">Auberge La Canebière</h3>
+                  <p class="property-price">Nuit à partir de 25€</p>
+                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="property-card">
+              <a href="#" class="property-link" aria-labelledby="hotel-amina">
+                <img src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="Auberge Le Panier" class="property-image">
+                <div class="property-content">
+                  <h3 id="hotel-amina" class="property-title">Auberge Le Panier</h3>
+                  <p class="property-price">Nuit à partir de 25€</p>
+                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <!-- Button -->
+          <h3 class="offers-button">Afficher plus</h3>
+        </section>
+
+        <aside class="offers-aside">
+          <h3 class="offers-title">Les plus populaires</h3>
+          <article class="property-card">
+            <a href="#" class="property-link" aria-labelledby="hotel-amina">
+              <img src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="Auberge Le Panier" class="property-image">
+              <div class="property-content">
+                <h3 id="hotel-amina" class="property-title">Auberge Le Panier</h3>
+                <p class="property-price">Nuit à partir de 25€</p>
+                <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                  <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                  <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+        </aside>
+      </div>
+
+      <!-- TO DO -->
+
+      <!--       
+      <div class="section-group-sponsored">
+        <div class="sponsored-title">
+          <h2>Les plus populaires</h2>
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <div class="property-popular">
           <div class="main-row">
-            <div class="property-card"><a href="hebergements"></a>
-              <img src="./assets/img/offers-main/jpg/fred-kleber.jpg" alt="Hôtel du port">
+            <div class="property-card">
+              <img src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg" alt="Hôtel Le soleil du matin">
               <section>
-                <h3>Hôtel du port</h3>
-                <p>Nuit à partir de 52€</p>
+                <h3>Hôtel Le soleil du matin</h3>
+                <p>Nuit à partir de 25€</p>
               </section>
               <div class="star-rating">
                 <i class="fa-solid fa-star"></i>
@@ -86,10 +243,10 @@
             </div>
 
             <div class="property-card">
-              <img src="./assets/img/offers-main/jpg/febrian-zakaria.jpg" alt="Hôtel chez Amina">
+              <img src="./assets/img/offers-sponsored/jpg/aw-creative.jpg" alt="Chambres d’hôtes Au cœur de l’eau">
               <section>
-                <h3>Hôtel chez Amina</h3>
-                <p>Nuit à partir de 96€</p>
+                <h3>Chambres d’hôtes Au cœur de l’eau</h3>
+                <p>Nuit à partir de 71€</p>
               </section>
               <div class="star-rating">
                 <i class="fa-solid fa-star"></i>
@@ -101,9 +258,9 @@
             </div>
 
             <div class="property-card">
-              <img src="./assets/img/offers-main/jpg/reisetopia.jpg" alt="Hôtel Les mouettes">
+              <img src="./assets/img/offers-sponsored/jpg/febrian-zakaria2.jpg" alt="Hôtel Bleu et Blanc">
               <section>
-                <h3>Hôtel Les mouettes</h3>
+                <h3>Hôtel Bleu et Blanc</h3>
                 <p>Nuit à partir de 76€</p>
               </section>
               <div class="star-rating">
@@ -115,117 +272,12 @@
               </div>
             </div>
           </div>
-
-          <div class="main-row">
-            <div class="property-card">
-              <img src="./assets/img/offers-main/jpg/annie-spratt.jpg" alt="Hôtel de la mer">
-              <section>
-                <h3>Hôtel de la mer</h3>
-                <p>Nuit à partir de 46€</p>
-              </section>
-              <div class="star-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-
-            <div class="property-card">
-              <img src="./assets/img/offers-main/jpg/marcus-loke.jpg" alt="Auberge La Canebière">
-              <section>
-                <h3>Auberge La Canebière</h3>
-                <p>Nuit à partir de 25€</p>
-              </section>
-              <div class="star-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-
-            <div class="property-card">
-              <img src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="Auberge Le Panier">
-              <section>
-                <h3>Auberge Le Panier</h3>
-                <p>Nuit à partir de 25€</p>
-              </section>
-              <div class="star-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="section-title">
-            <h2>Afficher plus</h2>
-          </div>
-        </div>
-
-        <!-- Main - Sponsored -->
-        <div class="section-group-sponsored">
-          <div class="sponsored-title">
-            <h2>Les plus populaires</h2>
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
-          <div class="property-popular">
-            <div class="main-row">
-              <div class="property-card">
-                <img src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg" alt="Hôtel Le soleil du matin">
-                <section>
-                  <h3>Hôtel Le soleil du matin</h3>
-                  <p>Nuit à partir de 25€</p>
-                </section>
-                <div class="star-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                </div>
-              </div>
-
-              <div class="property-card">
-                <img src="./assets/img/offers-sponsored/jpg/aw-creative.jpg" alt="Chambres d’hôtes Au cœur de l’eau">
-                <section>
-                  <h3>Chambres d’hôtes Au cœur de l’eau</h3>
-                  <p>Nuit à partir de 71€</p>
-                </section>
-                <div class="star-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                </div>
-              </div>
-
-              <div class="property-card">
-                <img src="./assets/img/offers-sponsored/jpg/febrian-zakaria2.jpg" alt="Hôtel Bleu et Blanc">
-                <section>
-                  <h3>Hôtel Bleu et Blanc</h3>
-                  <p>Nuit à partir de 76€</p>
-                </section>
-                <div class="star-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      </div> -->
 
       <!-- Main - Activities -->
+      <!--        
       <div id="populaires" class="property-activities">
         <h2>Activités à Marseille</h2>
         <div class="property-card">
@@ -247,7 +299,9 @@
           <img src="./assets/img/activities/jpg/florian-wehde.jpg" alt="Notre-Dame-de-la-Garde">
           <h3>Notre-Dame-de-la-Garde</h3>
         </div>
-      </div>
+      </div> 
+      -->
+
     </main>
 
     <!-- Footer -->
