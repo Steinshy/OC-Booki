@@ -8,11 +8,11 @@
     <meta name="description" content="Booki, votre plateforme de réservation de logements">
     <meta name="keywords" content="booki, réservation, logement, hébergement">
     <meta name="author" content="X">
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff">
     <title>Booki - Trouvez votre hébergement pour des vacances de rêve</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/favicons/booki.ico" />
-    <link rel="manifest" href="assets/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicons/booki.ico">
+    <link rel="manifest" href="assets/manifest.json">
     <!-- Font Awesome CDN & CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -20,9 +20,9 @@
 
   <body>
     <!-- Header -->
-    <header class="site-header" role="banner">
+    <header class="site-header">
       <img class="site-logo" src="./assets/favicons/booki.ico" alt="Booki-Logo">
-      <nav role="navigation" aria-label="Navigation Principale">
+      <nav aria-label="Navigation Principale">
         <ul>
           <li><a aria-current="page">Hébergements</a></li>
           <li><a>Activités</a></li>
@@ -31,9 +31,9 @@
     </header>
 
     <!-- Main - Search -->
-    <main class="main-content" role="main">
+    <main class="main-content">
       <section class="main-section" aria-labelledby="main-title">
-        <h1 class="site-title" id="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <h1 class="site-title" id="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
         <p class="site-subtitle">En plein centre ville ou en pleine nature</p>
 
         <form class="search-form" role="search" aria-label="Recherche d'hébergements">
@@ -83,15 +83,32 @@
       <!-- Main - Hotels Offers -->
       <div class="hotels-container">
         <section class="offers-section" aria-labelledby="marseille-title">
-          <h3 class="offers-title">Hébergements à Marseille</h3>
+          <h3 id="marseille-title" class="offers-title">Hébergements à Marseille</h3>
 
           <div class="offers-cards">
             <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-amina">
-                <img src="./assets/img/offers-main/jpg/marcus-loke.jpg" alt="Auberge la Cannebière"
+              <a href="#" class="property-link" aria-labelledby="hotel-du-port">
+                <img src="./assets/img/offers-main/jpg/fred-kleber.jpg" alt="hotel-du-port" class="property-image">
+                <div class="property-content">
+                  <h3 id="hotel-du-port" class="property-title">Hôtel du port</h3>
+                  <p class="property-price">Nuit à partir de 52€</p>
+                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="property-card">
+              <a href="#" class="property-link" aria-labelledby="hotel-chez-amina">
+                <img src="./assets/img/offers-main/jpg/febrian-zakaria.jpg" alt="hotel-chez-amina"
                   class="property-image">
                 <div class="property-content">
-                  <h3 id="hotel-amina" class="property-title">Hôtel chez Amina</h3>
+                  <h3 id="hotel-chez-amina" class="property-title">Hôtel chez Amina</h3>
                   <p class="property-price">Nuit à partir de 96€</p>
                   <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -105,28 +122,10 @@
             </article>
 
             <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-amina">
-                <img src="./assets/img/offers-main/jpg/febrian-zakaria.jpg" alt="Hôtel chez Amina"
-                  class="property-image">
+              <a href="#" class="property-link" aria-labelledby="hotel-les-mouettes">
+                <img src="./assets/img/offers-main/jpg/reisetopia.jpg" alt="hotel-les-mouettes" class="property-image">
                 <div class="property-content">
-                  <h3 id="hotel-amina" class="property-title">Hôtel chez Amina</h3>
-                  <p class="property-price">Nuit à partir de 96€</p>
-                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
-                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
-                    <i class="fa-solid fa-star rating-star-empty" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </article>
-
-            <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-amina">
-                <img src="./assets/img/offers-main/jpg/reisetopia.jpg" alt="Hôtel Les mouettes" class="property-image">
-                <div class="property-content">
-                  <h3 id="hotel-amina" class="property-title">Hôtel les mouettes</h3>
+                  <h3 id="hotel-les-mouettes" class="property-title">Hôtel les mouettes</h3>
                   <p class="property-price">Nuit à partir de 76€</p>
                   <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -141,10 +140,10 @@
           </div>
           <div class="offers-cards">
             <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-amina">
-                <img src="./assets/img/offers-main/jpg/annie-spratt.jpg" alt="Hôtel de la mer" class="property-image">
+              <a href="#" class="property-link" aria-labelledby="hotel-de-la-mer">
+                <img src="./assets/img/offers-main/jpg/annie-spratt.jpg" alt="hotel-de-la-mer" class="property-image">
                 <div class="property-content">
-                  <h3 id="hotel-amina" class="property-title">Hôtel de la mer</h3>
+                  <h3 id="hotel-de-la-mer" class="property-title">Hôtel de la mer</h3>
                   <p class="property-price">Nuit à partir de 46€</p>
                   <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -158,11 +157,11 @@
             </article>
 
             <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-amina">
-                <img src="./assets/img/offers-main/jpg/marcus-loke.jpg" alt="Auberge La Canebière"
+              <a href="#" class="property-link" aria-labelledby="auberge-la-canebiere">
+                <img src="./assets/img/offers-main/jpg/marcus-loke.jpg" alt="auberge-la-canebiere"
                   class="property-image">
                 <div class="property-content">
-                  <h3 id="hotel-amina" class="property-title">Auberge La Canebière</h3>
+                  <h3 id="auberge-la-canebiere" class="property-title">Auberge La Canebière</h3>
                   <p class="property-price">Nuit à partir de 25€</p>
                   <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -176,10 +175,10 @@
             </article>
 
             <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-amina">
-                <img src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="Auberge Le Panier" class="property-image">
+              <a href="#" class="property-link" aria-labelledby="auberge-le-panier">
+                <img src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="auberge-le-panier" class="property-image">
                 <div class="property-content">
-                  <h3 id="hotel-amina" class="property-title">Auberge Le Panier</h3>
+                  <h3 id="auberge-le-panier" class="property-title">Auberge Le Panier</h3>
                   <p class="property-price">Nuit à partir de 25€</p>
                   <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -199,10 +198,11 @@
         <aside class="offers-aside">
           <h3 class="offers-title">Les plus populaires</h3>
           <article class="property-card">
-            <a href="#" class="property-link" aria-labelledby="hotel-amina">
-              <img src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="Auberge Le Panier" class="property-image">
+            <a href="#" class="property-link" aria-labelledby="hotel-le-soleil-du-matin">
+              <img src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg" alt="hotel-le-soleil-du-matin"
+                class="property-image">
               <div class="property-content">
-                <h3 id="hotel-amina" class="property-title">Auberge Le Panier</h3>
+                <h3 id="hotel-le-soleil-du-matin" class="property-title">Hôtel Le soleil du matin</h3>
                 <p class="property-price">Nuit à partir de 25€</p>
                 <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
