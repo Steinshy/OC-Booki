@@ -20,9 +20,11 @@
 
   <body>
     <!-- Header -->
-    <header class="site-header">
-      <img class="site-logo" src="./assets/favicons/booki.ico" alt="Booki-Logo">
-      <nav aria-label="Navigation Principale">
+    <header>
+      <div>
+        <img class="header-logo" src="./assets/favicons/booki.ico" alt="Booki-Logo">
+      </div>
+      <nav class="header-nav" role="navigation" aria-label="Navigation Principale">
         <ul>
           <li><a aria-current="page">Hébergements</a></li>
           <li><a>Activités</a></li>
@@ -30,50 +32,51 @@
       </nav>
     </header>
 
-    <!-- Main - Search -->
-    <main class="main-content">
-      <section class="main-section" aria-labelledby="main-title">
-        <h1 class="site-title" id="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p class="site-subtitle">En plein centre ville ou en pleine nature</p>
+    <!-- Main -->
+    <main>
+      <section aria-labelledby="main-title">
+        <h1 class="main-title" id="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p class="main-subtitle">En plein centre ville ou en pleine nature</p>
 
+        <!-- Main - Search -->
         <form class="search-form" role="search" aria-label="Recherche d'hébergements">
-          <label for="search-input">
+          <label for="search-field">
             <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
           </label>
 
-          <input class="search-input" id="search-input" type="text" placeholder="Marseille, France"
+          <input class="search-field" id="search-field" type="text" placeholder="Marseille, France"
             aria-label="Ville de destination" required>
-          <button type="submit" class="search-button">
-            <span class="search-text">Rechercher</span>
+          <button class="search-submit" type="submit">
+            <span class="button-text">Rechercher</span>
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
       </section>
 
       <!-- Main - Filters -->
-      <section class="filters-section" role="group" aria-labelledby="filters-title">
-        <div class="filters" role="group" aria-labelledby="filters-title">
-          <h2 id="filters-title" class="filters-title">Filtres</h2>
-          <button type="button" class="filter-button" aria-pressed="false">
+      <section class="filters" role="group" aria-labelledby="filters-title">
+        <div class="filters-container" role="group" aria-labelledby="filters-title">
+          <h2 class="filters-title" id="filters-title">Filtres</h2>
+          <button class="filters-button" type="button" aria-pressed="false">
             <i class="fa-solid fa-money-bill" aria-hidden="true"></i>
             <span>Économique</span>
           </button>
-          <button type="button" class="filter-button" aria-pressed="false">
+          <button class="filters-button" type="button" aria-pressed="false">
             <i class="fa-solid fa-person" aria-hidden="true"></i>
             <span>Familial</span>
           </button>
-          <button type="button" class="filter-button" aria-pressed="false">
+          <button class="filters-button" type="button" aria-pressed="false">
             <i class="fa-solid fa-heart" aria-hidden="true"></i>
             <span>Romantique</span>
           </button>
-          <button type="button" class="filter-button" aria-pressed="false">
+          <button class="filters-button" type="button" aria-pressed="false">
             <i class="fa-solid fa-fire" aria-hidden="true"></i>
             <span>Nos pépites</span>
           </button>
         </div>
 
-        <div class="availability-info" aria-live="polite">
-          <p aria-live="polite">
+        <div class="filters-info" aria-live="polite">
+          <p class="filters-info-text" aria-live="polite">
             <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
             Plus de 500 logements sont disponibles dans cette ville
           </p>
@@ -81,18 +84,20 @@
       </section>
 
       <!-- Main - Hotels Offers -->
-      <div class="hotels-container">
-        <section class="offers-section" aria-labelledby="marseille-title">
-          <h3 id="marseille-title" class="offers-title">Hébergements à Marseille</h3>
+      <div class="hotels">
+        <section class="hotels-offers" aria-labelledby="marseille-title">
+          <h3 class="hotels-title" id="marseille-title">Hébergements à Marseille</h3>
+          <div class="hotels-grid">
 
-          <div class="offers-cards">
-            <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-du-port">
-                <img src="./assets/img/offers-main/jpg/fred-kleber.jpg" alt="hotel-du-port" class="property-image">
-                <div class="property-content">
-                  <h3 id="hotel-du-port" class="property-title">Hôtel du port</h3>
-                  <p class="property-price">Nuit à partir de 52€</p>
-                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+            <!-- Main - Hotels First Row -->
+            <article class="hotel-card">
+              <a class="hotel-card-link" href="#" aria-labelledby="hotel-du-port">
+                <img class="hotel-card-image" alt="hotel-du-port" src="./assets/img/offers-main/jpg/fred-kleber.jpg">
+
+                <div class="hotel-card-content">
+                  <h3 class="hotel-card-title" id="hotel-du-port">Hôtel du port</h3>
+                  <p class="hotel-card-price">Nuit à partir de 52€</p>
+                  <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -103,14 +108,14 @@
               </a>
             </article>
 
-            <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-chez-amina">
-                <img src="./assets/img/offers-main/jpg/febrian-zakaria.jpg" alt="hotel-chez-amina"
-                  class="property-image">
-                <div class="property-content">
-                  <h3 id="hotel-chez-amina" class="property-title">Hôtel chez Amina</h3>
-                  <p class="property-price">Nuit à partir de 96€</p>
-                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+            <article class="hotel-card">
+              <a class="hotel-card-link" href="#" aria-labelledby="hotel-chez-amina">
+                <img class="hotel-card-image" alt="hotel-chez-amina"
+                  src="./assets/img/offers-main/jpg/febrian-zakaria.jpg">
+                <div class="hotel-card-content">
+                  <h3 class="hotel-card-title" id="hotel-chez-amina">Hôtel chez Amina</h3>
+                  <p class="hotel-card-price">Nuit à partir de 96€</p>
+                  <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -121,13 +126,14 @@
               </a>
             </article>
 
-            <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-les-mouettes">
-                <img src="./assets/img/offers-main/jpg/reisetopia.jpg" alt="hotel-les-mouettes" class="property-image">
-                <div class="property-content">
-                  <h3 id="hotel-les-mouettes" class="property-title">Hôtel les mouettes</h3>
-                  <p class="property-price">Nuit à partir de 76€</p>
-                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+            <article class="hotel-card">
+              <a class="hotel-card-link" href="#" aria-labelledby="hotel-les-mouettes">
+                <img class="hotel-card-image" alt="hotel-les-mouettes"
+                  src="./assets/img/offers-main/jpg/reisetopia.jpg">
+                <div class=" hotel-card-content">
+                  <h3 class="hotel-card-title" id="hotel-les-mouettes">Hôtel les mouettes</h3>
+                  <p class="hotel-card-price">Nuit à partir de 76€</p>
+                  <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -138,14 +144,16 @@
               </a>
             </article>
           </div>
-          <div class="offers-cards">
-            <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="hotel-de-la-mer">
-                <img src="./assets/img/offers-main/jpg/annie-spratt.jpg" alt="hotel-de-la-mer" class="property-image">
-                <div class="property-content">
-                  <h3 id="hotel-de-la-mer" class="property-title">Hôtel de la mer</h3>
-                  <p class="property-price">Nuit à partir de 46€</p>
-                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+          <!-- Main - Hotels Second Row -->
+          <div class="hotels-grid">
+
+            <article class="hotel-card">
+              <a class="hotel-card-link" href="#" aria-labelledby="hotel-de-la-mer">
+                <img class="hotel-card-image" alt="hotel-de-la-mer" src="./assets/img/offers-main/jpg/annie-spratt.jpg">
+                <div class="hotel-card-content">
+                  <h3 class="hotel-card-title" id="hotel-de-la-mer">Hôtel de la mer</h3>
+                  <p class="hotel-card-price">Nuit à partir de 46€</p>
+                  <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -156,14 +164,14 @@
               </a>
             </article>
 
-            <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="auberge-la-canebiere">
-                <img src="./assets/img/offers-main/jpg/marcus-loke.jpg" alt="auberge-la-canebiere"
-                  class="property-image">
-                <div class="property-content">
-                  <h3 id="auberge-la-canebiere" class="property-title">Auberge La Canebière</h3>
-                  <p class="property-price">Nuit à partir de 25€</p>
-                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+            <article class="hotel-card">
+              <a class="hotel-card-link" href="#" aria-labelledby="auberge-la-canebiere">
+                <img class="hotel-card-image" alt="auberge-la-canebiere"
+                  src="./assets/img/offers-main/jpg/marcus-loke.jpg">
+                <div class="hotel-card-content">
+                  <h3 class="hotel-card-title" id="auberge-la-canebiere">Auberge La Canebière</h3>
+                  <p class="hotel-card-price">Nuit à partir de 25€</p>
+                  <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -174,13 +182,13 @@
               </a>
             </article>
 
-            <article class="property-card">
-              <a href="#" class="property-link" aria-labelledby="auberge-le-panier">
-                <img src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="auberge-le-panier" class="property-image">
-                <div class="property-content">
-                  <h3 id="auberge-le-panier" class="property-title">Auberge Le Panier</h3>
-                  <p class="property-price">Nuit à partir de 25€</p>
-                  <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+            <article class="hotel-card">
+              <a class="hotel-card-link" href="#" aria-labelledby="auberge-le-panier">
+                <img class="hotel-card-image" src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="auberge-le-panier">
+                <div class="hotel-card-content">
+                  <h3 class="hotel-card-title" id="auberge-le-panier">Auberge Le Panier</h3>
+                  <p class="hotel-card-price">Nuit à partir de 25€</p>
+                  <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -195,16 +203,17 @@
           <h3 class="offers-button">Afficher plus</h3>
         </section>
 
+        <!-- Main - Hotels Sponsored -->
         <aside class="offers-aside">
           <h3 class="offers-title">Les plus populaires</h3>
-          <article class="property-card">
-            <a href="#" class="property-link" aria-labelledby="hotel-le-soleil-du-matin">
-              <img src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg" alt="hotel-le-soleil-du-matin"
-                class="property-image">
-              <div class="property-content">
-                <h3 id="hotel-le-soleil-du-matin" class="property-title">Hôtel Le soleil du matin</h3>
-                <p class="property-price">Nuit à partir de 25€</p>
-                <div class="property-rating" role="img" aria-label="4 étoiles sur 5">
+          <article class="hotel-card">
+            <a class="hotel-card-link" href="#" aria-labelledby="hotel-le-soleil-du-matin">
+              <img class="hotel-card-image" alt="hotel-le-soleil-du-matin"
+                src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg">
+              <div class="hotel-card-content">
+                <h3 class="hotel-card-title" id="hotel-le-soleil-du-matin">Hôtel Le soleil du matin</h3>
+                <p class="hotel-card-price">Nuit à partir de 25€</p>
+                <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -216,123 +225,37 @@
           </article>
         </aside>
       </div>
-
-      <!-- TO DO -->
-
-      <!--       
-      <div class="section-group-sponsored">
-        <div class="sponsored-title">
-          <h2>Les plus populaires</h2>
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
-        <div class="property-popular">
-          <div class="main-row">
-            <div class="property-card">
-              <img src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg" alt="Hôtel Le soleil du matin">
-              <section>
-                <h3>Hôtel Le soleil du matin</h3>
-                <p>Nuit à partir de 25€</p>
-              </section>
-              <div class="star-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-
-            <div class="property-card">
-              <img src="./assets/img/offers-sponsored/jpg/aw-creative.jpg" alt="Chambres d’hôtes Au cœur de l’eau">
-              <section>
-                <h3>Chambres d’hôtes Au cœur de l’eau</h3>
-                <p>Nuit à partir de 71€</p>
-              </section>
-              <div class="star-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-
-            <div class="property-card">
-              <img src="./assets/img/offers-sponsored/jpg/febrian-zakaria2.jpg" alt="Hôtel Bleu et Blanc">
-              <section>
-                <h3>Hôtel Bleu et Blanc</h3>
-                <p>Nuit à partir de 76€</p>
-              </section>
-              <div class="star-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div> -->
-
-      <!-- Main - Activities -->
-      <!--        
-      <div id="populaires" class="property-activities">
-        <h2>Activités à Marseille</h2>
-        <div class="property-card">
-          <img src="./assets/img/activities/jpg/reno-laithienne.jpg" alt="Vieux-Port">
-          <h3>Vieux-Port</h3>
-        </div>
-
-        <div class="property-card">
-          <img src="./assets/img/activities/jpg/paul-hermann.jpg" alt="Fort de Pomègues">
-          <h3>Fort de Pomègues</h3>
-        </div>
-
-        <div class="property-card">
-          <img src="./assets/img/activities/jpg/kilyan-sockalingum.jpg" alt="Parc national des Calanques">
-          <h3>Parc national des Calanques</h3>
-        </div>
-
-        <div class="property-card">
-          <img src="./assets/img/activities/jpg/florian-wehde.jpg" alt="Notre-Dame-de-la-Garde">
-          <h3>Notre-Dame-de-la-Garde</h3>
-        </div>
-      </div> 
-      -->
-
     </main>
 
     <!-- Footer -->
     <footer>
-      <div class="footer-container">
-        <nav class="footer-nav">
-          <div>
-            <h3>A propos</h3>
-            <ul>
-              <li><a href="#">Fonctionnement du site</a></li>
-              <li><a href="#">Conditions générales</a></li>
-              <li><a href="#">Données et confidentialité</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3>Nos hébergements</h3>
-            <ul>
-              <li><a href="#">Charte qualité</a></li>
-              <li><a href="#">Proposer votre hôtel</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3>Assistance</h3>
-            <ul>
-              <li><a href="#">Centre d'aide</a></li>
-              <li><a href="#">Nous contacter</a></li>
-            </ul>
-          </div>
-        </nav>
+      <nav class="footer-nav">
+        <div class="footer-column">
+          <h3 class="footer-title">A propos</h3>
+          <ul class="footer-lists">
+            <li class="footer-item"><a href="#">Fonctionnement du site</a></li>
+            <li class="footer-item"><a href="#">Conditions générales</a></li>
+            <li class="footer-item"><a href="#">Données et confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Nos hébergements</h3>
+          <ul class="footer-lists">
+            <li class="footer-item"><a href="#">Charte qualité</a></li>
+            <li class="footer-item"><a href="#">Proposer votre hôtel</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Assistance</h3>
+          <ul class="footer-lists">
+            <li class="footer-item"><a href="#">Centre d'aide</a></li>
+            <li class="footer-item"><a href="#">Nous contacter</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 Booki, Inc. All rights reserved.</p>
       </div>
-      <p>© 2025 Booki, Inc. All rights reserved.</p>
     </footer>
   </body>
 
