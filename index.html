@@ -21,21 +21,22 @@
   <body>
     <!-- Header -->
     <header>
-      <div>
-        <a href="#"><img class="header-logo" src="./assets/favicons/booki.ico" alt="Booki-Logo"></a>
-      </div>
+      <a href="#" aria-label="Retour à l'accueil">
+        <img class="header-logo" src="./assets/favicons/booki.ico" alt="Booki-Logo" width="60">
+      </a>
       <nav class="header-nav" role="navigation" aria-label="Navigation Principale">
         <ul>
           <li><a href="#marseille-title" aria-current="page">Hébergements</a></li>
-          <li><a href="#">Activités</a></li>
+          <li><a href="#activities">Activités</a></li>
         </ul>
       </nav>
     </header>
 
+
     <!-- Main -->
     <main>
       <section aria-labelledby="main-title">
-        <h1 class="main-title" id="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <h1 class="main-title" id="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
         <p class="main-subtitle">En plein centre ville ou en pleine nature</p>
 
         <!-- Main - Search -->
@@ -46,9 +47,9 @@
 
           <input class="search-field" id="search-field" type="text" placeholder="Marseille, France"
             aria-label="Ville de destination" required>
-          <button class="search-submit" type="submit">
+          <button class="search-submit" type="submit" aria-label="Rechercher un hébergement">
             <span class="button-text">Rechercher</span>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
           </button>
         </form>
       </section>
@@ -57,22 +58,22 @@
       <section class="filters" role="group" aria-labelledby="filters-title">
         <div class="filters-container" role="group" aria-labelledby="filters-title">
           <h2 class="filters-title" id="filters-title">Filtres</h2>
-          <button class="filters-button" type="button" aria-pressed="false">
-            <i class="fa-solid fa-money-bill" aria-hidden="true"></i><a href="#">Économique</a>
+          <button class="filters-button" type="button" aria-pressed="false" aria-label="Filtrer par prix économique">
+            <i class="fa-solid fa-money-bill" aria-hidden="true"></i><span>Économique</span>
           </button>
-          <button class="filters-button" type="button" aria-pressed="false">
-            <i class="fa-solid fa-person" aria-hidden="true"></i><a href="#">Familial</a>
+          <button class="filters-button" type="button" aria-pressed="false" aria-label="Filtrer par type familial">
+            <i class="fa-solid fa-person" aria-hidden="true"></i><span>Familial</span>
           </button>
-          <button class="filters-button" type="button" aria-pressed="false">
-            <i class="fa-solid fa-heart" aria-hidden="true"></i><a href="#">Romantique</a>
+          <button class="filters-button" type="button" aria-pressed="false" aria-label="Filtrer par type romantique">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i><span>Romantique</span>
           </button>
-          <button class="filters-button" type="button" aria-pressed="false">
-            <i class="fa-solid fa-fire" aria-hidden="true"></i><a href="#">Nos pépites</a>
+          <button class="filters-button" type="button" aria-pressed="false" aria-label="Filtrer par pépites">
+            <i class="fa-solid fa-fire" aria-hidden="true"></i><span>Nos pépites</span>
           </button>
         </div>
 
-        <div class="filters-info" aria-live="polite">
-          <p class="filters-info-text" aria-live="polite">
+        <div class="filters-info">
+          <p class="filters-info-text">
             <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
             Plus de 500 logements sont disponibles dans cette ville
           </p>
@@ -82,18 +83,19 @@
       <!-- Main - Hotels Offers -->
       <div class="hotels">
         <section class="hotels-offers" aria-labelledby="marseille-title">
-          <h3 class="hotels-title" id="marseille-title">Hébergements à Marseille</h3>
-          <div class="hotels-grid">
+          <h2 class="hotels-offers-title" id="marseille-title">Hébergements à Marseille</h2>
+          <div class="offers-grids">
 
             <!-- Main - Hotels First Row -->
-            <article class="hotel-card">
+            <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-du-port">
-                <img class="hotel-card-image" alt="hotel-du-port" src="./assets/img/offers-main/jpg/fred-kleber.jpg">
-
+                <img class="hotel-card-image" alt="Hôtel du port" src="./assets/img/offers-main/jpg/fred-kleber.jpg"
+                  width="300" height="200" loading="lazy">
                 <div class="hotel-card-content">
                   <h3 class="hotel-card-title" id="hotel-du-port">Hôtel du port</h3>
                   <p class="hotel-card-price">Nuit à partir de 52€</p>
                   <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -103,7 +105,7 @@
               </a>
             </article>
 
-            <article class="hotel-card">
+            <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-chez-amina">
                 <img class="hotel-card-image" alt="hotel-chez-amina"
                   src="./assets/img/offers-main/jpg/febrian-zakaria.jpg">
@@ -115,12 +117,13 @@
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   </div>
                 </div>
               </a>
             </article>
 
-            <article class="hotel-card">
+            <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-les-mouettes">
                 <img class="hotel-card-image" alt="hotel-les-mouettes"
                   src="./assets/img/offers-main/jpg/reisetopia.jpg">
@@ -132,15 +135,14 @@
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   </div>
                 </div>
               </a>
             </article>
-          </div>
-          <!-- Main - Hotels Second Row -->
-          <div class="hotels-grid">
 
-            <article class="hotel-card">
+          <!-- Main - Hotels Second Row -->
+            <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-de-la-mer">
                 <img class="hotel-card-image" alt="hotel-de-la-mer" src="./assets/img/offers-main/jpg/annie-spratt.jpg">
                 <div class="hotel-card-content">
@@ -151,12 +153,13 @@
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   </div>
                 </div>
               </a>
             </article>
 
-            <article class="hotel-card">
+            <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="auberge-la-canebiere">
                 <img class="hotel-card-image" alt="auberge-la-canebiere"
                   src="./assets/img/offers-main/jpg/marcus-loke.jpg">
@@ -168,12 +171,13 @@
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   </div>
                 </div>
               </a>
             </article>
 
-            <article class="hotel-card">
+            <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="auberge-le-panier">
                 <img class="hotel-card-image" src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="auberge-le-panier">
                 <div class="hotel-card-content">
@@ -184,24 +188,27 @@
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   </div>
                 </div>
               </a>
             </article>
           </div>
+
           <!-- Button -->
-          <h3 class="offers-button">Afficher plus</h3>
+          <button class="offers-button" aria-label="Afficher plus d'hébergements">Afficher plus</button>
         </section>
 
-        <!-- Main - Hotels Sponsored -->
-        <aside class="hotels-sponsored">
-          <h3 class="hotels-sponsored-title">Les plus populaires</h3>
+        <!-- Main - Hotels Popular -->
+        <aside class="hotels-popular" aria-labelledby="popular-title">
+          <h2 class="hotels-popular-title" id="popular-title">Les plus populaires</h2>
 
-
-          <article class="hotel-card">
+          <div class="hotels-popular-grids">
+            <article class="card popular-card">
             <a class="hotel-card-link" href="#" aria-labelledby="hotel-le-soleil-du-matin">
               <img class="hotel-card-image" alt="hotel-le-soleil-du-matin"
                 src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg">
+
               <div class="hotel-card-content">
                 <h3 class="hotel-card-title" id="hotel-le-soleil-du-matin">Hôtel Le soleil du matin</h3>
                 <p class="hotel-card-price">Nuit à partir de 25€</p>
@@ -210,12 +217,13 @@
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                 </div>
               </div>
             </a>
           </article>
 
-          <article class="hotel-card">
+            <article class="card popular-card">
             <a class="hotel-card-link" href="#" aria-labelledby="chambre-d-hotes-au-coeur-de-l'eau">
               <img class="hotel-card-image" alt="chambre-d-hotes-au-coeur-de-l'eau"
                 src="./assets/img/offers-sponsored/jpg/aw-creative.jpg">
@@ -228,12 +236,13 @@
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                 </div>
               </div>
             </a>
           </article>
 
-          <article class="hotel-card">
+            <article class="card popular-card">
             <a class="hotel-card-link" href="#" aria-labelledby="hotel-bleu-blanc">
               <img class="hotel-card-image" alt="hotel-bleu-blanc"
                 src="./assets/img/offers-sponsored/jpg/febrian-zakaria2.jpg">
@@ -246,20 +255,28 @@
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
                   <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
+                  </div>
                 </div>
+              </a>
+            </article>
+          </div>
+        </aside>
+      </div>
               </div>
             </a>
           </article>
-
-        </aside>
       </div>
+      </section>
+
+
     </main>
 
     <!-- Footer -->
     <footer>
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Navigation du pied de page">
         <div class="footer-column">
-          <h3 class="footer-title">A propos</h3>
+          <h5 class="footer-title">À propos</h5>
           <ul class="footer-lists">
             <li class="footer-item"><a href="#">Fonctionnement du site</a></li>
             <li class="footer-item"><a href="#">Conditions générales</a></li>
@@ -267,14 +284,14 @@
           </ul>
         </div>
         <div class="footer-column">
-          <h3 class="footer-title">Nos hébergements</h3>
+          <h5 class="footer-title">Nos hébergements</h5>
           <ul class="footer-lists">
             <li class="footer-item"><a href="#">Charte qualité</a></li>
             <li class="footer-item"><a href="#">Proposer votre hôtel</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3 class="footer-title">Assistance</h3>
+          <h5 class="footer-title">Assistance</h5>
           <ul class="footer-lists">
             <li class="footer-item"><a href="#">Centre d'aide</a></li>
             <li class="footer-item"><a href="#">Nous contacter</a></li>
