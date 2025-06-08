@@ -5,10 +5,27 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Booki, votre plateforme de réservation de logements">
-    <meta name="keywords" content="booki, réservation, logement, hébergement">
+    <meta name="description"
+      content="Booki, votre plateforme de réservation de logements à Marseille. Trouvez votre hébergement idéal pour des vacances de rêve.">
+    <meta name="keywords"
+      content="booki, réservation, logement, hébergement, marseille, hôtel, auberge, chambre d'hôtes, vacances">
     <meta name="author" content="X">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Booki - Trouvez votre hébergement pour des vacances de rêve">
+    <meta property="og:description"
+      content="Réservez votre hébergement à Marseille. Plus de 500 logements disponibles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://booki.com">
+    <meta property="og:image" content="./assets/favicons/booki.ico">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Booki - Hébergements à Marseille">
+    <meta name="twitter:description" content="Trouvez votre hébergement idéal à Marseille">
+    <meta name="twitter:image" content="./assets/favicons/booki.ico">
+
     <title>Booki - Trouvez votre hébergement pour des vacances de rêve</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicons/booki.ico">
@@ -17,24 +34,22 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+      crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
 
   <body>
     <!-- Header -->
     <header>
       <a href="#" aria-label="Retour à l'accueil">
-        <img class="header-logo" src="./assets/favicons/booki.ico" alt="Booki-Logo">
+        <img class="header-logo" src="./assets/favicons/booki.ico" alt="Booki" width="60" height="19">
       </a>
-      <nav class="header-nav" role="navigation" aria-label="Navigation Principale">
+      <nav class="header-nav" aria-label="Navigation Principale">
         <ul>
           <li><a href="#marseille-title" aria-current="page">Hébergements</a></li>
           <li><a href="#activities">Activités</a></li>
         </ul>
       </nav>
     </header>
-
 
     <!-- Main -->
     <main>
@@ -50,7 +65,7 @@
 
           <input class="search-field" id="search-field" type="text" placeholder="Marseille, France"
             aria-label="Ville de destination" required>
-          <button class="search-submit" type="submit" aria-label="Rechercher un hébergement">
+          <button class="search-submit" type="submit" aria-label="Rechercher un hébergement à Marseille">
             <span class="button-text">Rechercher</span>
             <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
           </button>
@@ -76,12 +91,11 @@
         </div>
 
         <div class="filters-info">
-          <p class="filters-info-text">
-            <i class="fa-solid fa-circle-info"></i>
-            Plus de 500 logements sont disponibles dans cette ville
-          </p>
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <p class="info-text">Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
       </section>
+
       <!-- Main - Hotels Offers -->
       <div class="hotels">
         <section class="hotels-offers" aria-labelledby="marseille-title">
@@ -91,8 +105,10 @@
             <!-- Main - Hotels First Row -->
             <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-du-port">
-                <img class="hotel-card-image" alt="Hôtel du port" src="./assets/img/offers-main/jpg/fred-kleber.jpg"
-                  loading="lazy">
+                <figure>
+                  <img class="hotel-card-image" alt="Vue extérieure de l'Hôtel du port"
+                    src="./assets/img/offers-main/jpg/fred-kleber.jpg" loading="lazy">
+                </figure>
                 <div class="hotel-card-content">
                   <h3 class="hotel-card-title" id="hotel-du-port">Hôtel du port</h3>
                   <p class="hotel-card-price">Nuit à partir de 52€</p>
@@ -109,8 +125,8 @@
 
             <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-chez-amina">
-                <img class="hotel-card-image" alt="hotel-chez-amina"
-                  src="./assets/img/offers-main/jpg/febrian-zakaria.jpg">
+                <img class="hotel-card-image" alt="Façade de l'Hôtel chez Amina"
+                  src="./assets/img/offers-main/jpg/febrian-zakaria.jpg" loading="lazy">
                 <div class="hotel-card-content">
                   <h3 class="hotel-card-title" id="hotel-chez-amina">Hôtel chez Amina</h3>
                   <p class="hotel-card-price">Nuit à partir de 96€</p>
@@ -127,8 +143,8 @@
 
             <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-les-mouettes">
-                <img class="hotel-card-image" alt="hotel-les-mouettes"
-                  src="./assets/img/offers-main/jpg/reisetopia.jpg">
+                <img class="hotel-card-image" alt="Vue de l'Hôtel les mouettes"
+                  src="./assets/img/offers-main/jpg/reisetopia.jpg" loading="lazy">
                 <div class=" hotel-card-content">
                   <h3 class="hotel-card-title" id="hotel-les-mouettes">Hôtel les mouettes</h3>
                   <p class="hotel-card-price">Nuit à partir de 76€</p>
@@ -146,7 +162,8 @@
             <!-- Main - Hotels Second Row -->
             <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-de-la-mer">
-                <img class="hotel-card-image" alt="hotel-de-la-mer" src="./assets/img/offers-main/jpg/annie-spratt.jpg">
+                <img class="hotel-card-image" alt="Vue de l'Hôtel de la mer"
+                  src="./assets/img/offers-main/jpg/annie-spratt.jpg" loading="lazy">
                 <div class="hotel-card-content">
                   <h3 class="hotel-card-title" id="hotel-de-la-mer">Hôtel de la mer</h3>
                   <p class="hotel-card-price">Nuit à partir de 46€</p>
@@ -163,8 +180,8 @@
 
             <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="auberge-la-canebiere">
-                <img class="hotel-card-image" alt="auberge-la-canebiere"
-                  src="./assets/img/offers-main/jpg/marcus-loke.jpg">
+                <img class="hotel-card-image" alt="Entrée de l'Auberge La Canebière"
+                  src="./assets/img/offers-main/jpg/marcus-loke.jpg" loading="lazy">
                 <div class="hotel-card-content">
                   <h3 class="hotel-card-title" id="auberge-la-canebiere">Auberge La Canebière</h3>
                   <p class="hotel-card-price">Nuit à partir de 25€</p>
@@ -181,7 +198,8 @@
 
             <article class="card offers-card">
               <a class="hotel-card-link" href="#" aria-labelledby="auberge-le-panier">
-                <img class="hotel-card-image" src="./assets/img/offers-main/jpg/nicate-lee.jpg" alt="auberge-le-panier">
+                <img class="hotel-card-image" src="./assets/img/offers-main/jpg/nicate-lee.jpg"
+                  alt="Vue de l'Auberge Le Panier" loading="lazy">
                 <div class="hotel-card-content">
                   <h3 class="hotel-card-title" id="auberge-le-panier">Auberge Le Panier</h3>
                   <p class="hotel-card-price">Nuit à partir de 25€</p>
@@ -197,8 +215,9 @@
             </article>
           </div>
 
-          <!-- Button -->
-          <button class="offers-button" aria-label="Afficher plus d'hébergements">Afficher plus</button>
+          <button class="offers-button" href="#" aria-label="Afficher plus d'hébergements disponibles à Marseille">
+            Afficher plus
+          </button>
         </section>
 
         <!-- Main - Hotels Popular -->
@@ -208,8 +227,8 @@
           <div class="hotels-popular-grids">
             <article class="card popular-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-le-soleil-du-matin">
-                <img class="hotel-card-image" alt="hotel-le-soleil-du-matin"
-                  src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg">
+                <img class="hotel-card-image" alt="Vue extérieure de l'Hôtel Le soleil du matin"
+                  src="./assets/img/offers-sponsored/jpg/emile-guillemot.jpg" loading="lazy">
 
                 <div class="hotel-card-content">
                   <h3 class="hotel-card-title" id="hotel-le-soleil-du-matin">Hôtel Le soleil du matin</h3>
@@ -226,12 +245,11 @@
             </article>
 
             <article class="card popular-card">
-              <a class="hotel-card-link" href="#" aria-labelledby="chambre-d-hotes-au-coeur-de-l'eau">
-                <img class="hotel-card-image" alt="chambre-d-hotes-au-coeur-de-l'eau"
-                  src="./assets/img/offers-sponsored/jpg/aw-creative.jpg">
+              <a class="hotel-card-link" href="#" aria-labelledby="chambre-d-hotes-au-coeur-de-l-eau">
+                <img class="hotel-card-image" alt="Vue de la Chambre d'hôtes Au cœur de l'eau"
+                  src="./assets/img/offers-sponsored/jpg/aw-creative.jpg" loading="lazy">
                 <div class="hotel-card-content">
-                  <h3 class="hotel-card-title" id="chambre-d-hotes-au-coeur-de-l'eau">Chambres d'hôtes Au cœur de
-                    l'eau
+                  <h3 class="hotel-card-title" id="chambre-d-hotes-au-coeur-de-l-eau">Chambres d'hôtes Au cœur de l'eau
                   </h3>
                   <p class="hotel-card-price">Nuit à partir de 71€</p>
                   <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
@@ -247,11 +265,10 @@
 
             <article class="card popular-card">
               <a class="hotel-card-link" href="#" aria-labelledby="hotel-bleu-blanc">
-                <img class="hotel-card-image" alt="hotel-bleu-blanc"
-                  src="./assets/img/offers-sponsored/jpg/febrian-zakaria2.jpg">
+                <img class="hotel-card-image" alt="Façade de l'Hôtel Bleu et Blanc"
+                  src="./assets/img/offers-sponsored/jpg/febrian-zakaria2.jpg" loading="lazy">
                 <div class="hotel-card-content">
-                  <h3 class="hotel-card-title" id="hotel-bleu-blanc">Hôtel Bleu et Blanc
-                  </h3>
+                  <h3 class="hotel-card-title" id="hotel-bleu-blanc">Hôtel Bleu et Blanc</h3>
                   <p class="hotel-card-price">Nuit à partir de 68€</p>
                   <div class="hotel-card-rating" role="img" aria-label="4 étoiles sur 5">
                     <i class="fa-solid fa-star rating-star" aria-hidden="true"></i>
@@ -273,7 +290,7 @@
         <div class="activities-grid">
           <article class="activity-card">
             <a class="activity-card-link" href="#" aria-labelledby="vieux-port">
-              <img class="activity-card-image" alt="Vieux Port de Marseille"
+              <img class="activity-card-image" alt="Vue panoramique du Vieux Port de Marseille"
                 src="./assets/img/activities/jpg/reno-laithienne.jpg" loading="lazy">
               <div class="activity-card-content">
                 <h3 class="activity-card-title" id="vieux-port">Vieux Port</h3>
@@ -282,8 +299,8 @@
           </article>
           <article class="activity-card">
             <a class="activity-card-link" href="#" aria-labelledby="fort-de-pomegues">
-              <img class="activity-card-image" alt="fort-de-pomegues"
-                src="./assets/img/activities/jpg/paul-hermann.jpg">
+              <img class="activity-card-image" alt="Vue du Fort de Pomegues depuis la mer"
+                src="./assets/img/activities/jpg/paul-hermann.jpg" loading="lazy">
               <div class="activity-card-content">
                 <h4 class="activity-card-title" id="fort-de-pomegues">Fort de Pomegues</h4>
               </div>
@@ -291,8 +308,8 @@
           </article>
           <article class="activity-card">
             <a class="activity-card-link" href="#" aria-labelledby="parc-national-des-calanques">
-              <img class="activity-card-image" alt="parc-national-des-calanques"
-                src="./assets/img/activities/jpg/kilyan-sockalingum.jpg">
+              <img class="activity-card-image" alt="Paysage du Parc national des Calanques"
+                src="./assets/img/activities/jpg/kilyan-sockalingum.jpg" loading="lazy">
               <div class="activity-card-content">
                 <h4 class="activity-card-title" id="parc-national-des-calanques">Parc national des Calanques</h4>
               </div>
@@ -300,8 +317,8 @@
           </article>
           <article class="activity-card">
             <a class="activity-card-link" href="#" aria-labelledby="notre-dame-de-la-garde">
-              <img class="activity-card-image" alt="notre-dame-de-la-garde"
-                src="./assets/img/activities/jpg/florian-wehde.jpg">
+              <img class="activity-card-image" alt="Vue de la Basilique Notre-Dame-de-la-Garde"
+                src="./assets/img/activities/jpg/florian-wehde.jpg" loading="lazy">
               <div class="activity-card-content">
                 <h4 class="activity-card-title" id="notre-dame-de-la-garde">Notre-Dame-de-la-Garde</h4>
               </div>
@@ -309,8 +326,6 @@
           </article>
         </div>
       </section>
-
-
     </main>
 
     <!-- Footer -->
@@ -325,7 +340,7 @@
           </ul>
         </div>
         <div class="footer-column">
-          <h5 class="footer-title">Nos hébergements</h5>
+          <h5 class="footer-title">Nos hébergements</h5>
           <ul class="footer-lists">
             <li class="footer-item"><a href="#">Charte qualité</a></li>
             <li class="footer-item"><a href="#">Proposer votre hôtel</a></li>
