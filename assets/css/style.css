@@ -1,6 +1,10 @@
-/*---------------------------------------*/
-/*-----// Feuille de style Booki //------*/
-/*---------------------------------------*/
+/* ===================================
+    Booki Project - Main Stylesheet
+   =================================== */
+
+/* =========================
+    Global Variables & Reset
+   ========================= */
 *,
 html,
 body {
@@ -9,9 +13,8 @@ body {
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
   --text-color: #000000;
-  --white: #ffffff;
-  --gray: #d9d9d9;
-
+  --color-white: #ffffff;
+  --color-gray: #d9d9d9;
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
   margin: 0;
@@ -19,18 +22,10 @@ body {
   color: var(--text-color);
 }
 
-/*--------------------------- */
-/*-----// Reset CSS //------- */
-/*--------------------------- */
-body {
-  max-width: 1500px;
-  margin: 0 auto;
-  background-color: var(--white);
-}
+/* =========================
+    Global Elements
+   ========================= */
 
-/*---------------------------------*/
-/*-----// Global Elements //-------*/
-/*---------------------------------*/
 a {
   text-decoration: none;
   background-color: transparent;
@@ -42,15 +37,24 @@ li {
   background-color: transparent;
 }
 
-/*----------------------------------*/
-/*-----------// Header //-----------*/
-/*----------------------------------*/
+/* =========================
+    Body
+   ========================= */
+body {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+}
+
+/* =========================
+    Header
+   ========================= */
 header {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   padding: 0 2rem;
-  background-color: var(--white);
+  background-color: var(--color-white);
   color: var(--text-color);
 }
 
@@ -99,20 +103,21 @@ header {
   background-color: transparent;
 }
 
-/*--------------------------------*/
-/*-----------// Main //-----------*/
-/*--------------------------------*/
+/* =========================
+    Main
+   ========================= */
 main {
   display: flex;
   flex-direction: column;
   padding: 2rem;
   gap: 1.25rem;
-  background-color: var(--white);
+  background-color: var(--color-white);
 }
 
 .main-title {
-  font-size: 1.25rem;
+  font-size: 22px;
   font-weight: 700;
+  line-height: 100%;
   margin-bottom: 0.5rem;
   background-color: transparent;
 }
@@ -123,23 +128,23 @@ main {
   background-color: transparent;
 }
 
-/*-----------------------------*/
-/*-----// Search Form //-------*/
-/*-----------------------------*/
+/* =========================
+    Search Form
+   ========================= */
 .search-form {
   display: flex;
-  margin: 1.25em 0 2.25em 0;
+  margin: 1.25em 0 1.25em 0;
   background-color: transparent;
 }
 
 .search-form label {
   display: flex;
-  min-width: 3.125rem;
-  min-height: 3.125rem;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-bg-color);
+  min-width: 3.125rem;
+  min-height: 3.125rem;
   border-radius: 0.938rem 0 0 0.938rem;
+  background-color: var(--main-bg-color);
   color: var(--main-color);
 }
 
@@ -148,7 +153,7 @@ main {
   border: 0.125rem var(--main-bg-color) solid;
   font-size: 1rem;
   font-weight: 700;
-  background-color: var(--white);
+  background-color: var(--color-white);
 }
 
 .search-field::placeholder {
@@ -158,9 +163,9 @@ main {
 }
 
 .search-field:focus {
-  border: 0.125rem var(--main-color) solid;
   outline: none;
-  background-color: var(--white);
+  border: 0.125rem var(--main-color) solid;
+  background-color: var(--color-white);
 }
 
 .search-field:focus::placeholder {
@@ -169,31 +174,32 @@ main {
 }
 
 .search-submit {
+  cursor: pointer;
   border: 0;
   border-radius: 0px 0.938rem 0.938rem 0px;
   min-width: 8.125rem;
   font-size: 1rem;
   font-weight: 700;
-  cursor: pointer;
-  color: var(--white);
+  color: var(--color-white);
   background: var(--main-color);
 }
 
 .search-submit i {
   display: none;
   background-color: transparent;
-  color: var(--white);
+  color: var(--color-white);
 }
 
 .search-submit .button-text {
-  color: var(--white);
+  color: var(--color-white);
 }
 
-/*-----------------------------*/
-/*-----// Filters //-----------*/
-/*-----------------------------*/
+/* =========================
+    Filters
+   ========================= */
 .filters {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-bottom: 2rem;
   background-color: transparent;
@@ -202,7 +208,7 @@ main {
 .filters-lists {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;
   gap: 1.3rem;
   background-color: transparent;
 }
@@ -210,32 +216,41 @@ main {
 .filters-title {
   font-size: 1.125rem;
   font-weight: 700;
+  margin-bottom: 1rem;
   background-color: transparent;
 }
 
 .filters-button {
   display: flex;
-  align-items: center;
-  padding: 0.6em 1em;
-  background: var(--white);
-  border: 0.125rem var(--gray) solid;
-  border-radius: 0.938rem;
-  min-width: 8.125rem;
-  height: 3.125rem;
-  font-size: 1rem;
-  font-weight: 700;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
   cursor: pointer;
+  width: 162px;
+  height: 50px;
+  border-radius: 25px;
+  padding: 4px 19px 4px 19px;
+  border: 2px var(--color-gray) solid;
+  background: var(--color-white);
 }
 
 .filters-button:hover {
-  background-color: var(--filter-bg-color);
   color: var(--main-color);
+  background-color: var(--filter-bg-color);
 }
 
 .filters-button i {
-  width: 1.375rem;
-  margin-right: 0.5em;
+  font-size: 1.1rem;
   color: var(--main-color);
+  background-color: transparent;
+}
+
+.filters-button-text {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 14px;
+  font-weight: 800;
   background-color: transparent;
 }
 
@@ -258,9 +273,9 @@ main {
   background-color: transparent;
 }
 
-/*----------------------------*/
-/*--// Hotels - Offers    //--*/
-/*----------------------------*/
+/* =========================
+    Hotels
+   ========================= */
 .hotels {
   display: flex;
   justify-content: space-between;
@@ -272,46 +287,46 @@ main {
   display: flex;
   flex-direction: column;
   width: 66%;
-  gap: 1.25rem;
-  background-color: var(--main-bg-color);
-  border-radius: 1.25rem;
   padding: 2rem;
+  gap: 1.25rem;
+  border-radius: 1.25rem;
+  background-color: var(--main-bg-color);
 }
 
 .hotels-offers-title {
+  margin: 0;
   font-size: 1.3rem;
   font-weight: 700;
-  margin: 0;
   background-color: transparent;
 }
 
 .offers-grids {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
   background-color: transparent;
 }
 
 .offers-button {
   display: flex;
-  border: none;
   cursor: pointer;
+  margin-top: 1.25rem;
+  border: none;
+  padding: 0;
+  background: none;
   font-size: 1rem;
   font-weight: 700;
-  background: none;
-  padding: 0;
-  margin-top: 1.25rem;
 }
 
-/*-----------------------------*/
-/*----// Offers - Card //-- ---*/
-/*-----------------------------*/
+/* =========================
+    Hotels - Offers - Card
+   ========================= */
 .card {
-  background: var(--white);
+  overflow: hidden;
   border-radius: 1.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   transition: transform 0.2s;
+  background: var(--color-white);
 }
 
 .card:hover {
@@ -325,15 +340,15 @@ main {
 }
 
 .hotel-card-image {
+  object-fit: cover;
   width: 100%;
   height: 124px;
-  object-fit: cover;
   background-color: transparent;
 }
 
 .hotel-card-content {
   padding: 1rem;
-  background-color: var(--white);
+  background-color: var(--color-white);
 }
 
 .hotel-card-title {
@@ -351,19 +366,19 @@ main {
 
 .hotel-card-rating {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 0.2rem;
+  align-items: center;
   justify-content: flex-start;
   margin-top: auto;
+  gap: 0.2rem;
   color: var(--main-color);
   background-color: transparent;
 }
 
 .hotel-card-rating i {
   font-size: 0.8rem;
-  background-color: transparent;
   color: var(--main-color);
+  background-color: transparent;
 }
 
 .hotel-card-rating i:last-child {
@@ -371,15 +386,15 @@ main {
   background-color: transparent;
 }
 
-/*-----------------------------*/
-/*--// Offers - Populars ---//-*/
-/*-----------------------------*/
+/* =========================
+    Hotels - Populars
+   ========================= */
 .hotels-popular {
   display: flex;
   flex-direction: column;
+  border-radius: 1.25rem;
   width: 30%;
   gap: 1.25rem;
-  border-radius: 1.25rem;
   padding: 2rem;
   background-color: var(--main-bg-color);
 }
@@ -392,9 +407,9 @@ main {
 }
 
 .hotels-popular-title {
+  margin: 0;
   font-size: 1.3rem;
   font-weight: 700;
-  margin: 0;
   background-color: transparent;
 }
 
@@ -408,34 +423,34 @@ main {
 .popular-card {
   display: flex;
   flex-direction: column;
-  background: var(--white);
-  border-radius: 1.25rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   height: 9rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  background: var(--color-white);
 }
 
-.popular-card .hotel-card-content {
-  width: 60%;
+.hotel-card-content {
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  width: 60%;
+  background-color: var(--color-white);
 }
 
-.popular-card .hotel-card-link {
+.hotel-card-link {
   display: flex;
   background-color: transparent;
 }
 
-.popular-card .hotel-card-image {
+.hotel-card-image {
   width: 40%;
   height: 9rem;
   background-color: transparent;
 }
 
-/*-----------------------------*/
-/*--// Hotels - Activities //--*/
-/*-----------------------------*/
+/* =========================
+    Hotels - Activities
+   ========================= */
 .activities {
   display: flex;
   flex-direction: column;
@@ -459,12 +474,12 @@ main {
 }
 
 .activity-card {
-  border-radius: 1.25rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   height: 25rem;
+  border-radius: 1.25rem;
   transition: transform 0.2s;
-  background-color: var(--white);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
 }
 
 .activity-card:hover {
@@ -478,15 +493,15 @@ main {
 }
 
 .activity-card-image {
+  object-fit: cover;
   width: 100%;
   height: 85%;
-  object-fit: cover;
   background-color: transparent;
 }
 
 .activity-card-content {
   padding: 1.2rem;
-  background: var(--white);
+  background: var(--color-white);
 }
 
 .activity-card-title {
@@ -496,15 +511,15 @@ main {
   background-color: transparent;
 }
 
-/*-----------------------------*/
-/*--------// Footer //---------*/
-/*-----------------------------*/
+/* =========================
+    Footer
+   ========================= */
 footer {
   display: flex;
   flex-direction: column;
   margin-top: 1.875rem;
-  background-color: var(--main-bg-color);
   padding: 2.813rem 4.375rem;
+  background-color: var(--main-bg-color);
 }
 
 .footer-nav {
@@ -522,9 +537,9 @@ footer {
 }
 
 .footer-title {
+  margin: 0;
   font-size: 1rem;
   font-weight: 700;
-  margin: 0;
   background-color: transparent;
 }
 
@@ -537,7 +552,6 @@ footer {
 
 .footer-item a {
   font-weight: 500;
-
   background-color: transparent;
 }
 
@@ -553,9 +567,9 @@ footer {
   background-color: transparent;
 }
 
-/*-----------------------------*/
-/*----// Media Queries //------*/
-/*-----------------------------*/
+/* =========================
+    Media Queries
+   ========================= */
 
 /* Tablet: 768px to 1024px */
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -603,7 +617,8 @@ footer {
   }
 
   .header-logo {
-    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .header-nav {
@@ -619,8 +634,8 @@ footer {
   }
 
   .header-nav a {
-    width: 100%;
     text-align: center;
+    width: 100%;
     border-bottom: 0.125rem solid var(--main-bg-color);
   }
 
@@ -637,35 +652,71 @@ footer {
   }
 
   .search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     width: 100%;
   }
 
-  .search-form .search-field {
-    flex: 1;
+  .search-field {
+    width: 100%;
+    padding-right: 3.5rem;
+    box-sizing: border-box;
   }
 
-  .search-form .search-submit {
-    min-width: 3.125rem;
+  .search-submit {
+    position: absolute;
+    right: 0;
+    min-width: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 25%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   }
 
-  .search-form .search-submit .button-text {
-    display: none;
-  }
-
-  .search-form .search-submit i {
+  .search-submit i {
     display: inline;
+    font-size: 1.2rem;
+  }
+
+  .button-text {
+    display: none;
   }
 
   .filters-lists {
     gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   .filters-button {
-    min-width: calc(50% - 0.5rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .filters-button {
+  }
+
+  .filters-info {
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .info-text {
+    font-size: 0.95rem;
   }
 
   .hotels {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+
+  .hotels-offers {
+    order: 2;
+  }
+
+  .hotels-popular {
+    order: 1;
   }
 
   .hotels-offers,
