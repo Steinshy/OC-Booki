@@ -6,9 +6,7 @@
 /* =========================
     Global Variables & Reset
    ========================= */
-*,
-html,
-body {
+:root {
   /* Colors */
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -16,8 +14,18 @@ body {
   --text-color: #000000;
   --color-white: #ffffff;
   --color-gray: #d9d9d9;
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+
+  /* Typography */
+  --font-family: "Raleway", sans-serif;
+  /* Layout */
+  --max-width: 1500px;
+}
+/* Reset & Base Styles */
+*,
+html,
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -41,7 +49,7 @@ li {
     Body
    ========================= */
 body {
-  max-width: 1500px;
+  max-width: var(--max-width);
   margin: 0 auto;
   background-color: var(--color-white);
 }
