@@ -134,8 +134,8 @@ main {
 .search-form {
   display: flex;
   align-items: stretch;
-  margin: 1.3em 0 1.3em 0;
   height: 3.2rem;
+  margin: 1.3em 0 1.3em 0;
 }
 
 .search-form label {
@@ -153,12 +153,10 @@ main {
   max-width: 20rem;
   padding: 0 1rem;
   border: 0.2rem var(--main-bg-color) solid;
-  font-weight: 700;
   background-color: var(--color-white);
 }
 
 .search-field::placeholder {
-  font-weight: 700;
   color: var(--text-color);
 }
 
@@ -182,8 +180,8 @@ main {
 }
 
 .search-submit i {
-  height: 100%;
   display: none;
+  height: 100%;
   color: var(--color-white);
 }
 
@@ -220,8 +218,8 @@ main {
 .filters-button {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   cursor: pointer;
+  gap: 0.5rem;
   width: 162px;
   height: 50px;
   border-radius: 25px;
@@ -319,10 +317,10 @@ main {
 
 .offers-button {
   display: flex;
+  justify-content: flex-start;
   cursor: pointer;
   border: none;
   background: none;
-  justify-content: flex-start;
 }
 
 /* =========================
@@ -369,11 +367,11 @@ main {
 
 .card a {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
 }
 
 .card-link {
@@ -385,18 +383,18 @@ main {
     Single Card - Offers - Container
    ========================= */
 .card-offers {
-  position: relative;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* =========================
     Single Card - Popular - Container
   ========================= */
 .card-popular {
-  position: relative;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 /* =========================
@@ -462,56 +460,67 @@ main {
 }
 
 /* =========================
-    Hotels - Activities
+    Activities - Main
    ========================= */
+.main-activities {
+  display: grid;
+}
+
+/* =========================
+    Activities - Containers
+   ========================= */
+
 .activities {
+  display: grid;
+}
+
+/* =========================
+    Activities - Title
+   ========================= */
+
+.activities-title-container {
   display: flex;
-  flex-direction: column;
-  gap: 1.9rem;
-  margin-top: 1.9rem;
+  margin-bottom: 0.5rem;
 }
 
 .activities-title {
-  margin: 0;
 }
 
-.activities-grid {
+/* =========================
+    Cards - Main
+   ========================= */
+
+.cards-activities {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.3rem;
 }
 
-.activity-card {
-  overflow: hidden;
-  height: 25rem;
-  border-radius: 1.3rem;
-  transition: transform 0.2s;
-  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
-  background-color: var(--color-white);
+/* =========================
+    Cards - Single Card
+   ========================= */
+
+.card-activities {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
 }
 
-.activity-card:hover {
-  transform: translateY(-0.3rem);
-}
-
-.activity-card-link {
+.card a {
   display: block;
   height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-.activity-card-image {
-  object-fit: cover;
-  width: 100%;
+.image-activities {
+  border-radius: 15px 15px 0px 0px;
   height: 85%;
-}
-
-.activity-card-content {
-  padding: 1.2rem;
-  background: var(--color-white);
-}
-
-.activity-card-title {
-  margin: 0;
+  width: 100%;
 }
 
 /* =========================
@@ -601,12 +610,18 @@ footer {
     max-height: 100%;
   }
 
-  .activity-card {
-    height: 19rem;
+  /* =========================
+      Activities - Main
+    ========================= */
+  .main-activities {
   }
 
-  .footer-nav {
-    gap: 5vw;
+  .cards-activities {
+    height: 265px;
+  }
+
+  .image-activities {
+    height: 75%;
   }
 }
 
@@ -757,15 +772,22 @@ footer {
     height: 124px;
   }
 
-  .activities-grid {
-    grid-template-columns: 1fr;
+  /* =========================
+      Activities - Main
+    ========================= */
+  .main-activities {
   }
 
-  .activity-card {
+  .cards-activities {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .card-activities {
     height: 200px;
   }
 
-  .activity-card-image {
+  .image-activities {
     height: 75%;
   }
 
