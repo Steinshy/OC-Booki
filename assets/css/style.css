@@ -35,7 +35,6 @@ body {
 /* =========================
     Global Elements
    ========================= */
-
 a {
   text-decoration: none;
 }
@@ -400,17 +399,17 @@ main {
 /* =========================
     Single Card - Image - Main
    ========================= */
-
 .card-image {
-  width: 120px;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 20px 20px 0px 0px;
   border: 5px solid var(--color-white);
 }
 
+/* =========================
+    Single Card - Image - Popular
+   ========================= */
 .card-image-popular {
   width: 120px;
-  min-height: 150px;
-  max-height: 150px;
+  height: 120px;
   border-radius: 1rem 0 0 1rem;
   border: 5px solid var(--color-white);
 }
@@ -420,7 +419,7 @@ main {
    ========================= */
 .image-offers {
   width: 100%;
-  height: 124px;
+  height: 125px;
 }
 
 /* =========================
@@ -457,6 +456,10 @@ main {
 
 .card-rating i {
   color: var(--main-color);
+}
+
+.card-rating i:last-child {
+  color: var(--color-gray);
 }
 
 /* =========================
@@ -575,36 +578,43 @@ footer {
 
 /* Tablet: 768px to 1024px */
 @media (max-width: 1024px) and (min-width: 768px) {
+  /* =========================
+    Filters
+   ========================= */
   .filters-container {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .hotels {
+  /* =========================
+    Hotels - Main
+   ========================= */
+
+  .main-hotels {
     flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
+  /* =========================
+    Hotels - Containers
+   ========================= */
   .hotels-offers,
   .hotels-popular {
     width: 100%;
   }
 
-  .main-hotels {
-    grid-template-columns: 1fr;
-  }
+  /* =========================
+    Cards - Popular
+   ========================= */
 
   .cards-popular {
     grid-template-columns: repeat(3, 1fr);
+    width: 100%;
   }
 
-  .popular-card {
-    width: calc(33.33% - 1rem);
-  }
-
-  .offers-grids {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  /* =========================
+    Single Card - Image - Popular
+   ========================= */
   .card-image-popular {
     height: 100%;
     max-height: 100%;
@@ -627,6 +637,9 @@ footer {
 
 /* Mobile: <768px */
 @media (max-width: 767px) {
+  /* =========================
+    Header
+   ========================= */
   header {
     flex-direction: column;
     align-items: center;
@@ -664,10 +677,16 @@ footer {
     display: none;
   }
 
+  /* =========================
+    Main
+   ========================= */
   main {
     padding: 1rem;
   }
 
+  /* =========================
+    Search Form
+   ========================= */
   .search-form {
     display: flex;
     flex-direction: row;
@@ -702,6 +721,9 @@ footer {
     display: none;
   }
 
+  /* =========================
+    Filters
+   ========================= */
   .filters-container {
     align-items: flex-start;
     flex-direction: column;
@@ -728,55 +750,57 @@ footer {
   .info-text {
   }
 
+  /* =========================
+    Hotels - Main
+   ========================= */
   .main-hotels {
-    grid-template-columns: 1fr;
-  }
-
-  .cards-offers {
-    grid-template-columns: 1fr;
-  }
-
-  .hotels {
     flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
-  .hotels-offers {
-    order: 2;
-  }
-
-  .hotels-popular {
-    order: 1;
-  }
-
+  /* =========================
+    Hotels - Section - Offers
+   ========================= */
   .hotels-offers,
   .hotels-popular {
     width: 100%;
     padding: 1rem;
   }
 
-  .offers-grids {
+  /* =========================
+    Hotels - Section - Offers
+   ========================= */
+  .hotels-offers {
+    order: 2;
+  }
+
+  /* =========================
+    Hotels - Section - Popular
+   ========================= */
+
+  .hotels-popular {
+    order: 1;
+  }
+
+  /* =========================
+    Cards - Offers
+   ========================= */
+
+  .cards-offers {
     grid-template-columns: 1fr;
   }
 
-  .popular-card {
+  /* =========================
+    Cards - Popular
+   ========================= */
+  .cards-popular {
     flex-direction: column;
     height: auto;
   }
 
-  .popular-card .hotel-card-image,
-  .popular-card .hotel-card-content {
-    width: 100%;
-  }
-
-  .popular-card .hotel-card-image {
-    height: 124px;
-  }
-
   /* =========================
-      Activities - Main
-    ========================= */
-  .main-activities {
-  }
+    Cards - Activities
+   ========================= */
 
   .cards-activities {
     grid-template-columns: 1fr;
@@ -790,6 +814,10 @@ footer {
   .image-activities {
     height: 75%;
   }
+
+  /* =========================
+    Footer
+   ========================= */
 
   footer {
     padding: 2rem;
