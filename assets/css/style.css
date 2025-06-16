@@ -22,12 +22,12 @@
 }
 /* Reset & Base Styles */
 *,
-html,
-body {
+html {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   box-sizing: border-box;
   margin: 0;
+
   padding: 0;
   color: var(--text-color);
 }
@@ -259,7 +259,7 @@ main {
 .main-hotels {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 /* =========================
@@ -269,11 +269,9 @@ main {
 .hotels-offers,
 .hotels-popular {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   border-radius: 1.3rem;
   padding: 2rem;
-  gap: 1rem;
   background-color: var(--main-bg-color);
 }
 
@@ -284,36 +282,28 @@ main {
 .hotel-title-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .hotel-title-container i {
   color: var(--main-color);
 }
 
-.hotel-title {
-}
-
 /* =========================
     Hotels - Section - Offers
    ========================= */
-
 .hotels-offers {
-  align-content: flex-start;
 }
 
 /* =========================
     Hotels - Section - Popular
    ========================= */
-
 .hotels-popular {
-  width: 429px;
 }
 
 /* =========================
     Hotels - Offers Button
    ========================= */
-
 .offers-button {
   display: flex;
   justify-content: flex-start;
@@ -325,18 +315,17 @@ main {
 /* =========================
     Cards - Main
    ========================= */
-
 .cards-offers,
 .cards-popular {
-  gap: 1rem;
+  display: grid;
+  position: relative;
+  gap: 2rem;
 }
 
 /* =========================
     Cards - Offers
    ========================= */
-
 .cards-offers {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
 }
@@ -344,13 +333,7 @@ main {
 /* =========================
     Cards - Popular
    ========================= */
-
 .cards-popular {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1rem;
-  border-radius: 1.3rem;
-  background-color: var(--main-bg-color);
 }
 
 /* =========================
@@ -359,77 +342,55 @@ main {
 .card {
   overflow: hidden;
   border-radius: 1.3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   background: var(--color-white);
+  padding: 1rem;
 }
 
-.card a {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.card-popular {
+  display: flex;
+  flex-direction: row;
 }
 
-.card-link {
-  position: relative;
-  z-index: 2;
+.card-image-popular {
+  margin-right: 1rem;
 }
 
 /* =========================
     Single Card - Offers - Container
    ========================= */
 .card-offers {
-  display: flex;
-  flex-direction: column;
-  position: relative;
 }
 
 /* =========================
     Single Card - Popular - Container
   ========================= */
 .card-popular {
-  display: flex;
-  flex-direction: row;
-  position: relative;
 }
 
 /* =========================
-    Single Card - Image - Main
+    Single Card - Image
    ========================= */
 .card-image {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 125px;
   border-radius: 20px 20px 0px 0px;
-  border: 5px solid var(--color-white);
-}
-
-/* =========================
-    Single Card - Image - Popular
-   ========================= */
-.card-image-popular {
-  width: 120px;
-  height: 120px;
-  border-radius: 1rem 0 0 1rem;
   border: 5px solid var(--color-white);
 }
 
 /* =========================
     Single Card - Image - Offers
    ========================= */
-.image-offers {
-  width: 100%;
-  height: 125px;
+.offers-image {
 }
 
 /* =========================
     Single Card - Image - Popular
    ========================= */
-
-.image-popular {
+.popular-image {
   width: 120px;
-  height: 120px;
-  border-radius: 1rem 0 0 1rem;
 }
 
 /* =========================
@@ -442,18 +403,12 @@ main {
   z-index: 2;
   padding: 1rem 0.5rem;
   gap: 0.5rem;
+  width: 100%;
 }
 
 /* =========================
     Single Card - Content - Elements
    ========================= */
-.card-title {
-}
-
-.card-price {
-  flex-grow: 1;
-}
-
 .card-rating i {
   color: var(--main-color);
 }
@@ -606,7 +561,6 @@ footer {
   /* =========================
     Cards - Popular
    ========================= */
-
   .cards-popular {
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
@@ -615,7 +569,7 @@ footer {
   /* =========================
     Single Card - Image - Popular
    ========================= */
-  .card-image-popular {
+  .popular-image {
     height: 100%;
     max-height: 100%;
   }
@@ -759,12 +713,19 @@ footer {
   }
 
   /* =========================
-    Hotels - Section - Offers
+    Hotels - Containers
    ========================= */
   .hotels-offers,
   .hotels-popular {
     width: 100%;
     padding: 1rem;
+  }
+
+  /* =========================
+    Hotels - Section - Popular
+   ========================= */
+  .hotels-popular {
+    order: 1;
   }
 
   /* =========================
@@ -775,17 +736,8 @@ footer {
   }
 
   /* =========================
-    Hotels - Section - Popular
-   ========================= */
-
-  .hotels-popular {
-    order: 1;
-  }
-
-  /* =========================
     Cards - Offers
    ========================= */
-
   .cards-offers {
     grid-template-columns: 1fr;
   }
@@ -799,9 +751,8 @@ footer {
   }
 
   /* =========================
-    Cards - Activities
+    Activities - Cards
    ========================= */
-
   .cards-activities {
     grid-template-columns: 1fr;
     height: auto;
@@ -818,7 +769,6 @@ footer {
   /* =========================
     Footer
    ========================= */
-
   footer {
     padding: 2rem;
   }
