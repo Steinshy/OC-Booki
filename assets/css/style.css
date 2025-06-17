@@ -30,6 +30,7 @@
   --spacing-large: 3rem;
 
   /* Font */
+  --font-size-small: 0.5em;
   --font-size-base: 1em;
   --font-size-large: 1.5em;
   --font-size-x-large: 2em;
@@ -90,7 +91,7 @@ header {
 }
 
 .header__logo {
-  margin: 1.3rem 0;
+  margin: 1.5rem 0;
 }
 
 .header__nav,
@@ -132,7 +133,7 @@ main {
 }
 
 .main__title {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-base);
 }
 
 /* =========================
@@ -194,9 +195,7 @@ main {
     Filters
    ========================= */
 .filters {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
 }
 
 .filters__container {
@@ -207,26 +206,24 @@ main {
 }
 
 .filters__lists {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-small);
 }
 
 .filters__button {
   display: flex;
-  align-items: center;
   cursor: pointer;
   gap: var(--spacing-small);
-  width: 162px;
   max-height: 50px;
   border-radius: 25px;
   padding: var(--spacing-base);
-  border: 3px var(--border-color) solid;
+  border: 2px var(--border-color) solid;
   background: var(--white-color);
 }
 
 .filters__button:hover {
+  border: var(--main-color);
   color: var(--hover-color);
   background-color: var(--filter-bg-color);
 }
@@ -238,12 +235,14 @@ main {
 }
 
 .filters__button-text {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
 }
 
 .filters__info {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: var(--spacing-wide);
   gap: var(--spacing-base);
@@ -290,6 +289,9 @@ main {
     Hotels - Offers - Button
    ========================= */
 .hotels__offers-button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
   margin-top: auto;
   padding-top: var(--spacing-wide);
@@ -302,6 +304,8 @@ main {
   z-index: var(--z-index-base);
   left: 0;
   right: 0;
+  top: auto;
+  bottom: auto;
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
 }
@@ -333,6 +337,7 @@ main {
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: 100%;
   background: var(--white-color);
   border-radius: var(--spacing-medium);
@@ -421,18 +426,6 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-medium);
 }
-
-/* =========================
-    Activities - Single Card
-   ========================= */
-.card__activities {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-radius: var(--spacing-medium);
-  box-shadow: var(--box-shadow);
-}
-
 /* =========================
     Activities - Single Card - Image
    ========================= */
@@ -465,6 +458,7 @@ footer {
 .footer__column {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: var(--spacing-base);
 }
 
@@ -598,10 +592,6 @@ footer {
     padding: 0 var(--spacing-medium);
   }
 
-  .search__label {
-    min-width: var(--spacing-base);
-  }
-
   .search__input {
     padding: 0 var(--spacing-base);
     max-width: 100%;
@@ -630,21 +620,8 @@ footer {
   }
 
   .filters__lists {
-    justify-content: center;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: var(--spacing-base);
-  }
-
-  .filters__button {
-    width: 100%;
-  }
-
-  .filters__info {
-    align-items: center;
-    gap: var(--spacing-base);
-    margin-top: var(--spacing-wide);
   }
 
   /* =========================
