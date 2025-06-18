@@ -33,6 +33,7 @@
   /* Font */
   --font-size-small: 0.5em;
   --font-size-base: 1em;
+  --font-size-medium: 1.25em;
   --font-size-large: 1.5em;
   --font-size-x-large: 2em;
   --font-size-xx-large: 3em;
@@ -58,14 +59,34 @@ html {
 /* =========================
     Global Elements
    ========================= */
-a { text-decoration: none; }
-ul, li { list-style: none; }
-img { object-fit: cover; }
+a {
+  text-decoration: none;
+}
 
-::placeholder {
-  font-size: var(--font-size-large);
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-bold);
   color: var(--text-color);
+}
+.activities__title h2,
+.hotels__title h2 {
+  font-size: var(--font-size-medium);
+}
+
+.card__title h3,
+.card__content h3,
+.hotels__offers-more h3 {
+  font-size: var(--font-size-base);
 }
 
 /* =========================
@@ -163,7 +184,6 @@ main {
 .search__input:focus {
   outline: none;
   border: 0.2rem var(--main-color) solid;
-  background-color: var(--white-color);
 }
 
 .search__input:focus::placeholder {
@@ -179,7 +199,7 @@ main {
 }
 
 .search__button-text {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-bold);
   color: var(--white-color);
 }
@@ -222,6 +242,7 @@ main {
 }
 
 .filters__button:hover {
+  cursor: pointer;
   border: 0 var(--main-color) solid;
   color: var(--hover-color);
   background-color: var(--filter-bg-color);
@@ -286,7 +307,7 @@ main {
 /* =========================
     Hotels - Offers - Button
    ========================= */
-.hotels__offers-button {
+.hotels__offers-more {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -296,17 +317,14 @@ main {
   padding-bottom: var(--spacing-base);
 }
 
-.hotels__offers-button a {
-  display: block;
+.hotels__offers-more:hover a {
+  color: var(--main-color);
+}
+
+.hotels__offers-more a,
+.card a {
   position: absolute;
-  height: var(--height-full);
   z-index: var(--z-index-base);
-  left: 0;
-  right: 0;
-  top: auto;
-  bottom: auto;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
 }
 
 /* =========================
@@ -343,16 +361,6 @@ main {
   background: var(--white-color);
 }
 
-.card a {
-  display: block;
-  position: absolute;
-  height: var(--height-full);
-  z-index: var(--z-index-base);
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 /* =========================
     Card - Popular - Main
    ========================= */
@@ -366,14 +374,13 @@ main {
 .card__image {
   width: var(--width-full);
   height: 180px;
-  border-radius: var(--spacing-medium);
-  border: 0.3rem solid var(--white-color);
+  border-radius: var(--spacing-medium) var(--spacing-medium) 0 0;
+  border: 0.5rem solid var(--white-color);
 }
 
 .card__popular-image {
   width: 130px;
-  border-radius: var(--spacing-medium) var(--spacing-medium) 0
-    var(--spacing-medium);
+  border-radius: var(--spacing-medium) 0 0 var(--spacing-medium);
 }
 
 /* =========================
@@ -433,20 +440,15 @@ main {
   padding-left: var(--spacing-base);
   height: 60px;
 }
-
-.card__title h3 {
-  font-size: 16px;
-  font-weight: 700;
-}
-
 /* =========================
     Activities - Single Card - Image
    ========================= */
 .card__image-activities {
   display: flex;
-  width: var(--width-full);
-  height: 400px;
   flex-shrink: 0;
+  width: var(--width-full);
+  border-radius: var(--spacing-medium) var(--spacing-medium) 0 0;
+  height: 400px;
 }
 
 /* =========================
@@ -459,14 +461,8 @@ footer {
   background-color: var(--main-bg-color);
 }
 
-.footer__nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .footer__column,
+.footer__nav,
 .footer__list {
   display: flex;
   flex-direction: column;
@@ -474,8 +470,13 @@ footer {
   gap: var(--spacing-base);
 }
 
-.footer__link:hover {
-  color: var(--hover-color);
+.footer__nav {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__list a:hover {
+  color: var(--main-color);
 }
 
 .footer__bottom {
