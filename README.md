@@ -66,7 +66,7 @@ Booki est une plateforme de réservation d’hébergements et d’activités, d�
 - [Maquette Figma](https://www.figma.com/design/B3eLowtWREc9YXzBcGRAHn/Maquettes-Booki?node-id=3-0&p=f)
 - [Scénario du projet](https://openclassrooms.com/fr/paths/877/projects/639/697-scenario)
 - [Code de départ](https://github.com/OpenClassrooms-Student-Center/booki-starter-code)
-- [Icônes Bootstrap](https://icons.getbootstrap.com/?q=char)
+- [Icônes Font Awesome 6.7.2](https://https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css)
 - [Validateur W3C](https://validator.w3.org/)
 - [Note de synthèse (PDF)](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/DW_P2+HTML+CSS+Booki/DW+Booki+-+Note+de+synthese.pdf)
 
