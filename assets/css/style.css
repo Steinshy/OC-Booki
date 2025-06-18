@@ -241,7 +241,6 @@ main {
 .filters__info {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   margin-top: var(--spacing-wide);
   gap: var(--spacing-base);
@@ -293,7 +292,8 @@ main {
   flex-wrap: wrap;
   position: relative;
   margin-top: auto;
-  padding-top: var(--spacing-wide);
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-base);
 }
 
 .hotels__offers-button a {
@@ -366,7 +366,8 @@ main {
 .card__image {
   width: var(--width-full);
   height: 180px;
-  border-radius: var(--spacing-medium) var(--spacing-medium) 0 0;
+  border-radius: var(--spacing-medium);
+  border: 0.3rem solid var(--white-color);
 }
 
 .card__popular-image {
@@ -411,8 +412,7 @@ main {
 
 .activities__title {
   display: flex;
-  padding: var(--spacing-base);
-  border-radius: 0 0 var(--spacing-medium) var(--spacing-medium);
+  margin-bottom: var(--spacing-base);
 }
 
 /* =========================
@@ -424,6 +424,21 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-medium);
 }
+
+.card__title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: var(--spacing-base);
+  height: 60px;
+}
+
+.card__title h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
 /* =========================
     Activities - Single Card - Image
    ========================= */
@@ -432,8 +447,6 @@ main {
   width: var(--width-full);
   height: 400px;
   flex-shrink: 0;
-  border-radius: var(--spacing-medium) var(--spacing-medium) 0 0;
-  border: 0.3rem solid var(--white-color);
 }
 
 /* =========================
@@ -506,7 +519,7 @@ footer {
   }
 
   .card__popular-image {
-    width: 100px;
+    height: var(--height-full);
   }
 
   .card__content h4 {
