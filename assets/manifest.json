@@ -1,25 +1,31 @@
 {
+  "name": "Booki – Plateforme de réservation d'hébergements à Marseille",
+  "short_name": "Booki",
+  "description": "Trouvez et réservez facilement hôtels, auberges ou chambres d'hôtes à Marseille pour des vacances de rêve.",
+  "lang": "fr",
+  "dir": "auto",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
   "theme_color": "#8936FF",
   "background_color": "#2EC6FE",
   "icons": [
     {
-      "purpose": "maskable",
+      "src": "favicons/icon512_maskable.png",
       "sizes": "512x512",
-      "src": "icon512_maskable.png",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "purpose": "any",
+      "src": "favicons/icon512_rounded.png",
       "sizes": "512x512",
-      "src": "icon512_rounded.png",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicons/booki.ico",
+      "sizes": "48x48 72x72 96x96 144x144 192x192 256x256",
+      "type": "image/x-icon"
     }
-  ],
-  "orientation": "any",
-  "display": "standalone",
-  "dir": "auto",
-  "lang": "fr",
-  "name": "Booki",
-  "short_name": "Booki",
-  "description": "Booki, votre plateforme de réservation de logements"
+  ]
 }
