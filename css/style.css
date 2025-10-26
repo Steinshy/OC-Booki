@@ -65,6 +65,15 @@
 /* =========================
     CSS Reset & Base Styles
    ========================= */
+
+/* Font Loading Optimization */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {

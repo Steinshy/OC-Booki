@@ -7,8 +7,7 @@
     <title>Booki - Trouvez votre hébergement pour des vacances de rêve</title>
     <meta
       name="description"
-      content="Booki, votre plateforme de réservation de logements à Marseille. Trouvez votre hébergement idéal pour des vacances de rêve."
-   >
+      content="Booki, votre plateforme de réservation de logements à Marseille. Trouvez votre hébergement idéal pour des vacances de rêve.">
     <meta name="keywords" content="booki, réservation, logement, hébergement, marseille, hôtel, auberge, chambre d'hôtes, vacances">
     <meta name="author" content="X">
 
@@ -16,7 +15,10 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#0065fc">
+
+    <!-- Favicon - Load early -->
+    <link rel="icon" type="image/x-icon" href="./favicons/booki.ico">
 
     <!-- Social Media Meta Tags -->
     <meta property="og:title" content="Booki - Trouvez votre hébergement pour des vacances de rêve">
@@ -30,41 +32,31 @@
     <meta name="twitter:image" content="./favicons/booki.ico">
 
     <!-- External Resources Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
+    <link rel="preload" href="./assets/offers/fred-kleber.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="./css/style.css" as="style">
     <link rel="stylesheet" href="./css/style.css">
-
-    <!-- External Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" crossorigin="anonymous">
-
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-   >
-
-    <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/x-icon" href="./favicons/booki.ico">
     <link rel="manifest" href="manifest.json">
   </head>
 
   <body>
-    <!-- Header -->
     <header>
       <a href="#" aria-label="Retour à l'accueil">
-        <img class="header_logo" src="./favicons/booki.ico" alt="Logo Booki" width="60" height="19">
+        <img class="header_logo" src="./favicons/booki.ico" alt="Logo Booki" width="60" height="19" loading="eager" fetchpriority="high">
       </a>
       <nav class="header_nav" aria-label="Navigation Principale">
-        <ul class="header_nav-list" role="menubar">
+        <ul class="header_nav-list">
           <li class="header_nav-item">
-            <a class="header_nav-link" href="#recommendations" role="menuitem" aria-current="page">Hébergements</a>
+            <a class="header_nav-link" href="#recommendations" aria-current="page">Hébergements</a>
           </li>
           <li class="header_nav-item">
-            <a class="header_nav-link" href="#activities" role="menuitem">Activités</a>
+            <a class="header_nav-link" href="#activities">Activités</a>
           </li>
         </ul>
       </nav>
@@ -130,7 +122,7 @@
               <picture>
                 <source srcset="./assets/offers/fred-kleber.webp" type="image/webp">
                 <source srcset="./assets/offers/fred-kleber.jpg" type="image/jpeg">
-                <img class="card_image offers_image" alt="Hôtel du port" src="./assets/offers/fred-kleber.jpg" loading="lazy">
+                <img class="card_image offers_image" src="./assets/offers/fred-kleber.jpg" alt="Hôtel du port" loading="eager" fetchpriority="high">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="hotel-du-port">Hôtel du port</h3>
@@ -153,7 +145,7 @@
               <picture>
                 <source srcset="./assets/offers/febrian-zakaria.webp" type="image/webp">
                 <source srcset="./assets/offers/febrian-zakaria.jpg" type="image/jpeg">
-                <img class="card_image offers_image" alt="Hôtel chez Amina" src="./assets/offers/febrian-zakaria.jpg" loading="lazy">
+                <img class="card_image offers_image" src="./assets/offers/febrian-zakaria.jpg" alt="Hôtel chez Amina" loading="lazy">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="hotel-chez-amina">Hôtel chez Amina</h3>
@@ -176,7 +168,7 @@
               <picture>
                 <source srcset="./assets/offers/reisetopia.webp" type="image/webp">
                 <source srcset="./assets/offers/reisetopia.jpg" type="image/jpeg">
-                <img class="card_image offers_image" alt="Hôtel les mouettes" src="./assets/offers/reisetopia.jpg" loading="lazy">
+                <img class="card_image offers_image" src="./assets/offers/reisetopia.jpg" alt="Hôtel les mouettes" loading="lazy">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="hotel-les-mouettes">Hôtel les mouettes</h3>
@@ -199,7 +191,7 @@
               <picture>
                 <source srcset="./assets/offers/annie-spratt.webp" type="image/webp">
                 <source srcset="./assets/offers/annie-spratt.jpg" type="image/jpeg">
-                <img class="card_image offers_image" alt="Hôtel de la mer" src="./assets/offers/annie-spratt.jpg" loading="lazy">
+                <img class="card_image offers_image" src="./assets/offers/annie-spratt.jpg" alt="Hôtel de la mer" loading="lazy">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="hotel-de-la-mer">Hôtel de la mer</h3>
@@ -222,7 +214,7 @@
               <picture>
                 <source srcset="./assets/offers/marcus-loke.webp" type="image/webp">
                 <source srcset="./assets/offers/marcus-loke.jpg" type="image/jpeg">
-                <img class="card_image offers_image" alt="Auberge La Canebière" src="./assets/offers/marcus-loke.jpg" loading="lazy">
+                <img class="card_image offers_image" src="./assets/offers/marcus-loke.jpg" alt="Auberge La Canebière" loading="lazy">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="auberge-la-canebiere">Auberge La Canebière</h3>
@@ -273,18 +265,13 @@
             Les plus populaires
             <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
           </h2>
-          <div class="cards_popular" role="list" aria-label="Liste des hébergements populaires">
+          <div class="cards_popular">
             <article class="card card_popular">
               <a href="#" aria-labelledby="hotel-le-soleil-du-matin"></a>
               <picture>
                 <source srcset="./assets/offers/emile-guillemot.webp" type="image/webp">
                 <source srcset="./assets/offers/emile-guillemot.jpg" type="image/jpeg">
-                <img
-                  class="card_image card_popular-image"
-                  alt="Hôtel Le soleil du matin"
-                  src="./assets/offers/emile-guillemot.jpg"
-                  loading="lazy"
-               >
+                <img class="card_image card_popular-image" src="./assets/offers/emile-guillemot.jpg" alt="Hôtel Le soleil du matin" loading="lazy">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="hotel-le-soleil-du-matin">Hôtel Le soleil du matin</h3>
@@ -307,12 +294,7 @@
               <picture>
                 <source srcset="./assets/offers/aw-creative.webp" type="image/webp">
                 <source srcset="./assets/offers/aw-creative.jpg" type="image/jpeg">
-                <img
-                  class="card_image card_popular-image"
-                  alt="Chambre d'hôtes Au cœur de l'eau"
-                  src="./assets/offers/aw-creative.jpg"
-                  loading="lazy"
-               >
+                <img class="card_image card_popular-image" src="./assets/offers/aw-creative.jpg" alt="Chambre d'hôtes Au cœur de l'eau" loading="lazy">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="chambre-d-hotes-au-coeur-de-l-eau">Chambre d'hôtes Au cœur de l'eau</h3>
@@ -335,12 +317,7 @@
               <picture>
                 <source srcset="./assets/offers/febrian-zakaria2.webp" type="image/webp">
                 <source srcset="./assets/offers/febrian-zakaria2.jpg" type="image/jpeg">
-                <img
-                  class="card_image card_popular-image"
-                  alt="Hôtel Bleu et Blanc"
-                  src="./assets/offers/febrian-zakaria2.jpg"
-                  loading="lazy"
-               >
+                <img class="card_image card_popular-image" alt="Hôtel Bleu et Blanc" src="./assets/offers/febrian-zakaria2.jpg" loading="lazy">
               </picture>
               <div class="card_content">
                 <h3 class="card_title" id="hotel-bleu-blanc">Hôtel Bleu et Blanc</h3>
@@ -365,18 +342,13 @@
       <section id="activities" class="activities" aria-labelledby="activities-title">
         <h2 id="activities-title">Activités à Marseille</h2>
 
-        <div class="cards_activities" role="list" aria-labelledby="activities-title">
+        <div class="cards_activities">
           <article class="card">
             <a href="#" aria-labelledby="vieux-port"></a>
             <picture>
               <source srcset="./assets/activities/reno-laithienne.webp" type="image/webp">
               <source srcset="./assets/activities/reno-laithienne.jpg" type="image/jpeg">
-              <img
-                class="card_image-activities"
-                alt="Vieux Port de Marseille - Vue panoramique du port historique avec ses bateaux"
-                src="./assets/activities/reno-laithienne.jpg"
-                loading="lazy"
-             >
+              <img class="card_image-activities" alt="Vieux Port de Marseille - Vue panoramique du port historique avec ses bateaux" src="./assets/activities/reno-laithienne.jpg" loading="lazy">
             </picture>
             <h3 id="vieux-port" class="activities_content-title">Vieux Port</h3>
           </article>
@@ -385,12 +357,7 @@
             <picture>
               <source srcset="./assets/activities/paul-hermann.webp" type="image/webp">
               <source srcset="./assets/activities/paul-hermann.jpg" type="image/jpeg">
-              <img
-                class="card_image-activities"
-                alt="Fort de Pomegues - Vue du fort historique depuis la mer Méditerranée"
-                src="./assets/activities/paul-hermann.jpg"
-                loading="lazy"
-             >
+              <img class="card_image-activities" alt="Fort de Pomegues - Vue du fort historique depuis la mer Méditerranée" src="./assets/activities/paul-hermann.jpg" loading="lazy">
             </picture>
             <h3 id="fort-de-pomegues" class="activities_content-title">Fort de Pomegues</h3>
           </article>
@@ -399,12 +366,7 @@
             <picture>
               <source srcset="./assets/activities/kilyan-sockalingum.webp" type="image/webp">
               <source srcset="./assets/activities/kilyan-sockalingum.jpg" type="image/jpeg">
-              <img
-                class="card_image-activities"
-                alt="Parc national des Calanques - Paysage naturel des calanques de Marseille"
-                src="./assets/activities/kilyan-sockalingum.jpg"
-                loading="lazy"
-             >
+              <img class="card_image-activities" alt="Parc national des Calanques - Paysage naturel des calanques de Marseille" src="./assets/activities/kilyan-sockalingum.jpg" loading="lazy">
             </picture>
             <h3 id="parc-national-des-calanques" class="activities_content-title">Parc national des Calanques</h3>
           </article>
@@ -413,12 +375,7 @@
             <picture>
               <source srcset="./assets/activities/florian-wehde.webp" type="image/webp">
               <source srcset="./assets/activities/florian-wehde.jpg" type="image/jpeg">
-              <img
-                class="card_image-activities"
-                alt="Basilique Notre-Dame-de-la-Garde - Vue de la basilique emblématique de Marseille"
-                src="./assets/activities/florian-wehde.jpg"
-                loading="lazy"
-             >
+              <img class="card_image-activities" alt="Basilique Notre-Dame-de-la-Garde - Vue de la basilique emblématique de Marseille" src="./assets/activities/florian-wehde.jpg" loading="lazy">
             </picture>
             <h3 id="notre-dame-de-la-garde" class="activities_content-title">Notre Dame de la Garde</h3>
           </article>
@@ -426,7 +383,6 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer>
       <nav class="footer_nav" aria-label="Navigation du pied de page">
         <div class="footer_column">
