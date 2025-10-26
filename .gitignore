@@ -9,10 +9,15 @@ lerna-debug.log*
 
 # Dependencies
 node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Build output
 dist
 dist-ssr
+build
+out
 *.local
 
 # Environment variables
@@ -21,16 +26,26 @@ dist-ssr
 .env.*.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-.idea
-.DS_Store
+.vscode/
+.idea/
+.cursor/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Cache directories
 .cache
@@ -38,12 +53,19 @@ dist-ssr
 .eslintcache
 .stylelintcache
 .prettier-cache
+.npm
+jspm_packages/
+.node_repl_history
 
 # Test coverage
 coverage
+.nyc_output
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
 
 # Vite
 .vite
-
-# OS files
-Thumbs.db

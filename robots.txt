@@ -1,6 +1,13 @@
-# Allow all crawlers
+# Robots.txt for Booki
+# https://steinshy.github.io/Booki/
+
 User-agent: *
 Allow: /
+Disallow: /admin/
 
 # Sitemap
 Sitemap: https://steinshy.github.io/Booki/sitemap.xml
+
+# Crawl-delay (optional, not all bots respect this)
+# User-agent: *
+# Crawl-delay: 1
