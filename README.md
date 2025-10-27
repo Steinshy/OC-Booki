@@ -10,6 +10,8 @@
 
 Booki est une plateforme web de réservation de logements à Marseille. Trouvez l'hébergement idéal – hôtel, auberge ou chambre d'hôtes – pour des vacances de rêve, selon vos envies et votre budget.
 
+![Booki Mockup](assets/Mockup.png)
+
 ## Démonstration
 
 - 🌐 **Demo :** [https://steinshy.github.io/OC-Booki/](https://steinshy.github.io/OC-Booki/)
@@ -25,7 +27,7 @@ Booki est une plateforme web de réservation de logements à Marseille. Trouvez 
 
 ## Structure du projet
 
-```
+```text
 Booki/
 ├── assets/
 │   ├── activities/           # Images des activités (JPG + WebP)
